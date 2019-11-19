@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_demo
-Fri Nov 15 18:51:16 2019
+Tue Nov 19 11:51:07 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -15,24 +15,23 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for drawCar:U1000|playerCar:U100|altsyncram:altsyncram_component|altsyncram_rrf1:auto_generated
- 14. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated
- 15. Parameter Settings for User Entity Instance: drawCar:U1000|playerCar:U100|altsyncram:altsyncram_component
- 16. Parameter Settings for User Entity Instance: vga_adapter:VGA
- 17. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
- 18. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
- 19. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 20. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
- 21. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 22. altsyncram Parameter Settings by Entity Instance
- 23. altpll Parameter Settings by Entity Instance
- 24. Port Connectivity Checks: "vga_adapter:VGA"
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for drawCar:U1000|playerCar:U100|altsyncram:altsyncram_component|altsyncram_rrf1:auto_generated
+ 13. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated
+ 14. Parameter Settings for User Entity Instance: drawCar:U1000|playerCar:U100|altsyncram:altsyncram_component
+ 15. Parameter Settings for User Entity Instance: vga_adapter:VGA
+ 16. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
+ 17. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
+ 18. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 19. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
+ 20. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. altpll Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "vga_adapter:VGA"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -58,7 +57,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Nov 15 18:51:16 2019           ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 19 11:51:07 2019           ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                   ; vga_demo                                        ;
 ; Top-level Entity Name           ; fill                                            ;
@@ -244,8 +243,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                                        ;
 ; Maximum fan-out node                        ; vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|clk[0] ;
 ; Maximum fan-out                             ; 41                                                                                     ;
-; Total fan-out                               ; 892                                                                                    ;
-; Average fan-out                             ; 3.20                                                                                   ;
+; Total fan-out                               ; 872                                                                                    ;
+; Average fan-out                             ; 3.13                                                                                   ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 
 
@@ -294,16 +293,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------------+-----------------+
 
 
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; drawCar:U1000|yCounter[7]             ; Lost fanout        ;
-; Total Number of Removed Registers = 1 ;                    ;
-+---------------------------------------+--------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
@@ -312,7 +301,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 55    ;
 ; Number of registers using Synchronous Clear  ; 45    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 20    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 35    ;
 ; Number of registers using Preset             ; 0     ;
@@ -325,9 +314,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |fill|drawCar:U1000|memCounter[3]                                                                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fill|drawCar:U1000|yCounter[1]                                                                         ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |fill|vga_adapter:VGA|vga_controller:controller|yCounter[9]                                             ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fill|drawCar:U1000|xCounter[7]                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |fill|drawCar:U1000|yCounter[1]                                                                         ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |fill|vga_adapter:VGA|vga_controller:controller|yCounter[8]                                             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fill|drawCar:U1000|xCounter[6]                                                                         ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |fill|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated|mux_ifb:mux3|result_node[1] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
 
@@ -947,17 +936,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+-------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "vga_adapter:VGA"                                                                                                                                                                       ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; plot     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; plot[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; VGA_R    ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (8 bits) it drives; bit(s) "VGA_R[9..8]" have no fanouts                                                          ;
-; VGA_G    ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (8 bits) it drives; bit(s) "VGA_G[9..8]" have no fanouts                                                          ;
-; VGA_B    ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (8 bits) it drives; bit(s) "VGA_B[9..8]" have no fanouts                                                          ;
-+----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga_adapter:VGA"                                                                                                                                                                         ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; resetn     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; resetn[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; plot       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; plot[-1]   ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; VGA_R      ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (8 bits) it drives; bit(s) "VGA_R[9..8]" have no fanouts                                                          ;
+; VGA_G      ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (8 bits) it drives; bit(s) "VGA_G[9..8]" have no fanouts                                                          ;
+; VGA_B      ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (8 bits) it drives; bit(s) "VGA_B[9..8]" have no fanouts                                                          ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -966,9 +957,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 55                          ;
-;     CLR SCLR          ; 10                          ;
-;     ENA CLR SCLR      ; 10                          ;
-;     ENA SCLR          ; 25                          ;
+;     ENA SCLR          ; 35                          ;
+;     SCLR              ; 10                          ;
 ;     plain             ; 10                          ;
 ; arriav_lcell_comb     ; 104                         ;
 ;     arith             ; 53                          ;
@@ -991,7 +981,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 12                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.40                        ;
-; Average LUT depth     ; 2.14                        ;
+; Average LUT depth     ; 2.15                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1010,7 +1000,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Fri Nov 15 18:50:51 2019
+    Info: Processing started: Tue Nov 19 11:50:41 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_demo -c vga_demo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1024,12 +1014,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga_ada
     Info (12023): Found entity 1: vga_controller File: W:/Documents/vga_demo_verilog/vga_adapter/vga_controller.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file vga_demo.v
     Info (12023): Found entity 1: vga_demo File: W:/Documents/vga_demo_verilog/vga_demo.v Line: 1
-Warning (10229): Verilog HDL Expression warning at fill.v(224): truncated literal to match 5 bits File: W:/Documents/vga_demo_verilog/fill.v Line: 224
-Warning (10229): Verilog HDL Expression warning at fill.v(229): truncated literal to match 3 bits File: W:/Documents/vga_demo_verilog/fill.v Line: 229
 Info (12021): Found 3 design units, including 3 entities, in source file fill.v
     Info (12023): Found entity 1: fill File: W:/Documents/vga_demo_verilog/fill.v Line: 3
-    Info (12023): Found entity 2: drawBackground File: W:/Documents/vga_demo_verilog/fill.v Line: 204
-    Info (12023): Found entity 3: drawCar File: W:/Documents/vga_demo_verilog/fill.v Line: 309
+    Info (12023): Found entity 2: drawBackground File: W:/Documents/vga_demo_verilog/fill.v Line: 243
+    Info (12023): Found entity 3: drawCar File: W:/Documents/vga_demo_verilog/fill.v Line: 350
 Info (12021): Found 1 design units, including 1 entities, in source file playercar.v
     Info (12023): Found entity 1: playerCar File: W:/Documents/vga_demo_verilog/playerCar.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file backgroundimage.v
@@ -1039,9 +1027,8 @@ Info (12127): Elaborating entity "fill" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at fill.v(44): object "go" assigned a value but never read File: W:/Documents/vga_demo_verilog/fill.v Line: 44
 Warning (10036): Verilog HDL or VHDL warning at fill.v(48): object "enable" assigned a value but never read File: W:/Documents/vga_demo_verilog/fill.v Line: 48
 Info (12128): Elaborating entity "drawCar" for hierarchy "drawCar:U1000" File: W:/Documents/vga_demo_verilog/fill.v Line: 57
-Warning (10036): Verilog HDL or VHDL warning at fill.v(317): object "done" assigned a value but never read File: W:/Documents/vga_demo_verilog/fill.v Line: 317
-Warning (10230): Verilog HDL assignment warning at fill.v(343): truncated value with size 8 to match size of target (7) File: W:/Documents/vga_demo_verilog/fill.v Line: 343
-Info (12128): Elaborating entity "playerCar" for hierarchy "drawCar:U1000|playerCar:U100" File: W:/Documents/vga_demo_verilog/fill.v Line: 310
+Warning (10036): Verilog HDL or VHDL warning at fill.v(364): object "done" assigned a value but never read File: W:/Documents/vga_demo_verilog/fill.v Line: 364
+Info (12128): Elaborating entity "playerCar" for hierarchy "drawCar:U1000|playerCar:U100" File: W:/Documents/vga_demo_verilog/fill.v Line: 351
 Info (12128): Elaborating entity "altsyncram" for hierarchy "drawCar:U1000|playerCar:U100|altsyncram:altsyncram_component" File: W:/Documents/vga_demo_verilog/playerCar.v Line: 81
 Info (12130): Elaborated megafunction instantiation "drawCar:U1000|playerCar:U100|altsyncram:altsyncram_component" File: W:/Documents/vga_demo_verilog/playerCar.v Line: 81
 Info (12133): Instantiated megafunction "drawCar:U1000|playerCar:U100|altsyncram:altsyncram_component" with the following parameter: File: W:/Documents/vga_demo_verilog/playerCar.v Line: 81
@@ -1117,7 +1104,6 @@ Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: W:/Documents/vga_demo_verilog/fill.v Line: 30
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 385 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CS_N -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_DIN -entity DE1_SoC was ignored
@@ -1508,8 +1494,7 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: W:/Documents/vga_demo_verilog/db/altpll_80u.tdf Line: 33
     Info: Must be connected
-Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: W:/Documents/vga_demo_verilog/fill.v Line: 22
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]" File: W:/Documents/vga_demo_verilog/fill.v Line: 22
     Warning (15610): No output dependent on input pin "KEY[3]" File: W:/Documents/vga_demo_verilog/fill.v Line: 22
     Warning (15610): No output dependent on input pin "SW[0]" File: W:/Documents/vga_demo_verilog/fill.v Line: 23
@@ -1518,18 +1503,20 @@ Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[3]" File: W:/Documents/vga_demo_verilog/fill.v Line: 23
     Warning (15610): No output dependent on input pin "SW[4]" File: W:/Documents/vga_demo_verilog/fill.v Line: 23
     Warning (15610): No output dependent on input pin "SW[5]" File: W:/Documents/vga_demo_verilog/fill.v Line: 23
+    Warning (15610): No output dependent on input pin "SW[6]" File: W:/Documents/vga_demo_verilog/fill.v Line: 23
     Warning (15610): No output dependent on input pin "SW[7]" File: W:/Documents/vga_demo_verilog/fill.v Line: 23
     Warning (15610): No output dependent on input pin "SW[8]" File: W:/Documents/vga_demo_verilog/fill.v Line: 23
+    Warning (15610): No output dependent on input pin "SW[9]" File: W:/Documents/vga_demo_verilog/fill.v Line: 23
 Info (21057): Implemented 177 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 39 output pins
     Info (21061): Implemented 110 logic cells
     Info (21064): Implemented 12 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 409 warnings
-    Info: Peak virtual memory: 740 megabytes
-    Info: Processing ended: Fri Nov 15 18:51:17 2019
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 407 warnings
+    Info: Peak virtual memory: 739 megabytes
+    Info: Processing ended: Tue Nov 19 11:51:07 2019
     Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Total CPU time (on all processors): 00:00:28
 
 

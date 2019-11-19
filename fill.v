@@ -53,8 +53,8 @@ module fill
 	 
 	 assign enable = ~KEY[2];
 	 
-	 //drawBackground dB(.clk(CLOCK_50), .reset(SW[9]), .enable(enable), .done(done), .xCounter(x), .yCounter(y), .cout(DataColour));
-	drawCar U1000(.clk(CLOCK_50), .reset(SW[9]), .enable(SW[6]),.ledr(LEDR[9:0]),.x(x),.y(y),.colour(DataColour));
+	//drawBackground dB(.clk(CLOCK_50), .reset(~reset), .enable(!KEY[0]), .x(x), .y(y), .colour(DataColour));
+	drawCar U1000(.clk(CLOCK_50), .reset(~reset), .enable(!KEY[1]),.ledr(LEDR[9:0]),.x(x),.y(y),.colour(DataColour));
 
     
 
@@ -62,7 +62,7 @@ module fill
     // Define the number of colours as well as the initial background
     // image file (.MIF) for the controller.
     vga_adapter VGA(
-            .resetn(reset),
+            .resetn(1),
             .clock(CLOCK_50),
             .colour(DataColour),
             .x(x),
@@ -201,44 +201,85 @@ endmodule
 //endmodule 
 
 
-module drawBackground(clk, reset, enable, done, xCounter, yCounter, cout);
-	input clk;
-	input enable;
-	input reset;
-	output reg done;
-	output [2:0] cout;
+//module drawBackground(clk, reset, enable, done, xCounter, yCounter, cout);
+//	input clk;
+//	input enable;
+//	input reset;
+//	output reg done;
+//	output [2:0] cout;
+//
+//	output reg [7:0] xCounter;
+//	output reg [6:0] yCounter;
+//	reg [14:0] addressCounter;
+//	
+//	  
+//	always@ (posedge clk) begin
+//		if(reset) begin
+//				done <= 0;
+//				addressCounter <= 0;
+//				xCounter <= 0;
+//				yCounter <= 0;
+//		end
+//		else if(enable && !done) begin
+//			if(addressCounter == 5'd19200)begin
+//				done <= 1;
+//			end
+//			else begin
+//				addressCounter <= addressCounter + 1;
+//				if(xCounter == 3'd160) begin
+//					xCounter <= 0;
+//					yCounter <= yCounter +1;
+//				end
+//				else begin
+//					xCounter <= xCounter +1;
+//				end
+//			end
+//		end
+//	end
+//	backgroundImage bI(.address(addressCounter), .clock(clk), .q(cout));
+//
+//endmodule
 
-	output reg [7:0] xCounter;
-	output reg [6:0] yCounter;
-	reg [14:0] addressCounter;
+module drawBackground(input clk, reset, enable, output[7:0] x, output [6:0] y, output [2:0] colour);
+		backgroundImage bG(.address(memCounter),.clock(clk),.q(colour));//iterate through address and read colour from memory
+																						 //This image is 21 x 30 px
 	
-	  
-	always@ (posedge clk) begin
-		if(reset) begin
-				done <= 0;
-				addressCounter <= 0;
-				xCounter <= 0;
-				yCounter <= 0;
+	reg[9:0] memCounter;// = 10'b1;
+	reg[7:0] xCounter;// = 8'b0;
+	reg[6:0] yCounter;// = 8'b0;
+	initial begin
+		memCounter = 10'b0;
+		xCounter = 8'b0;
+		yCounter = 7'b0;
+	end
+	
+	reg done = 1'b0;
+	
+	always@(posedge clk) begin
+		if(reset == 1)begin
+			xCounter <= 8'b0;
+			yCounter <= 7'b0;
+			memCounter <= 10'b0;
 		end
-		else if(enable && !done) begin
-			if(addressCounter == 5'd19200)begin
-				done <= 1;
-			end
-			else begin
-				addressCounter <= addressCounter + 1;
-				if(xCounter == 3'd160) begin
-					xCounter <= 0;
-					yCounter <= yCounter +1;
+		else if(enable)begin
+			if (memCounter < 10'b1001110110) begin
+				if(xCounter < 8'b10100)begin
+					xCounter <= xCounter +  1'b1;
 				end
 				else begin
-					xCounter <= xCounter +1;
+					xCounter <= 0;
+					yCounter <= yCounter + 1'b1;
 				end
+				memCounter <= memCounter + 1'b1;
 			end
 		end
 	end
-	backgroundImage bI(.address(addressCounter), .clock(clk), .q(cout));
+	
+	assign x = xCounter;
+	assign y = yCounter;
 
 endmodule
+
 
 
 //module drawCar(input clk,reset, leftEnable,rightEnable, midEnable, output[9:0]ledr, output  [7:0] x, output  [6:0] y, output [2:0] colour);
@@ -311,18 +352,21 @@ module drawCar(input clk, reset, enable, output[9:0]ledr, output[7:0] x, output 
 																						 //This image is 21 x 30 px
 	assign ledr = memCounter;
 	
-	reg[9:0] memCounter;
-	reg[7:0] xCounter;
-	reg[7:0] yCounter;
+	reg[9:0] memCounter;// = 10'b1;
+	reg[7:0] xCounter;// = 8'b0;
+	reg[6:0] yCounter;// = 8'b0;
+	initial begin
+		memCounter = 10'b0;
+		xCounter = 8'b0;
+		yCounter = 7'b0;
+	end
+	
 	reg done = 1'b0;
-	initial memCounter = 10'b0;
-	initial xCounter = 8'b0;
-	initial yCounter = 8'b0;
 	
 	always@(posedge clk) begin
 		if(reset == 1)begin
 			xCounter <= 8'b0;
-			yCounter <= 8'b0;
+			yCounter <= 7'b0;
 			memCounter <= 10'b0;
 		end
 		else if(enable)begin
@@ -340,6 +384,6 @@ module drawCar(input clk, reset, enable, output[9:0]ledr, output[7:0] x, output 
 	end
 	
 	assign x = 8'b00100001+xCounter;
-	assign y = 8'b01011000+yCounter;
+	assign y = 7'b1011000+yCounter;
 
-endmodule
+endmodule 
