@@ -1,5 +1,6 @@
-module decimalDisplay(CLOCK_50, HEX0, HEX1);
+module decimalDisplay(enable_module,CLOCK_50, HEX0, HEX1);
     input CLOCK_50;
+	 input enable_module;
 	 
 	 
     output [6:0] HEX0;
@@ -16,7 +17,7 @@ module decimalDisplay(CLOCK_50, HEX0, HEX1);
 	 initial tens <= 4'b0;
     initial count <= 27'b010111110101111000010000000;
     initial counter <= 27'b000000000000000000000000000;
-    assign enable = (counter == 27'b000000000000000000000000000) ? 1 : 0;
+    assign enable_increment = (counter == 27'b000000000000000000000000000) ? 1 : 0;
 
     seg7decoder u1(ones, HEX0);
 	 seg7decoder u2(tens, HEX1);
@@ -32,13 +33,14 @@ module decimalDisplay(CLOCK_50, HEX0, HEX1);
 //        end
 
     always@(posedge CLOCK_50)
+	 if(enable_module)
         begin
             if (counter >= count)
                 counter <= 27'b000000000000000000000000000;
             else
                 counter <= counter + 1;
 
-            if (enable)
+            if (enable_increment)
                 ones <= ones + 1;
 					 if(ones == 4'd10)
 					 begin
@@ -51,6 +53,7 @@ module decimalDisplay(CLOCK_50, HEX0, HEX1);
 						tens<=4'd0;
 					end
         end
+	
 
 endmodule
 

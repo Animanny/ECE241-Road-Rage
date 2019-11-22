@@ -7,7 +7,7 @@ module counter(CLOCK_50, count ,enable_count, enable);
 	output enable;
 
 	initial counter <= 27'b000000000000000000000000000;
-	assign enable = (counter == 27'b000000000000000000000000000) ? 1 : 0;
+	assign enable = (counter == 27'b000000000000000000000000000) ? 1'b1 : 1'b0;
 	
 	
 	always@(posedge CLOCK_50 && enable_count)
@@ -15,6 +15,6 @@ module counter(CLOCK_50, count ,enable_count, enable);
             if (counter >= count)
                 counter <= 27'b000000000000000000000000000;
             else
-                counter <= counter + 1;
+                counter <= counter + 27'b1;
 		end
 endmodule

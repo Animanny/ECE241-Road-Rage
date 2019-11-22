@@ -1,6 +1,6 @@
 vlib work
 
-vlog ctrlpath_generate.v
+vlog ctrlpath_generate.v counter.v
 
 vsim ctrlpath_generate
 

@@ -7,6 +7,10 @@ module fill
         KEY,                            // On Board Keys
         SW,
 		  LEDR,
+		  HEX0,
+		  HEX1,
+		  
+		  
         // The ports below are for the VGA output.  Do not change.
         VGA_CLK,                           //    VGA Clock
         VGA_HS,                            //    VGA H_SYNC
@@ -22,6 +26,12 @@ module fill
     input    [3:0]    KEY;    
     input [9:0] SW;                
     // Declare your inputs and outputs here
+	  output[9:0] LEDR;
+	  output[6:0]HEX0;
+	  output[6:0]HEX1;
+	 
+	 
+	 
     // Do not change the following outputs
     output            VGA_CLK;                   //    VGA Clock
     output            VGA_HS;                    //    VGA H_SYNC
@@ -31,16 +41,19 @@ module fill
     output    [7:0]    VGA_R;                   //    VGA Red[7:0] Changed from 10 to 8-bit DAC
     output    [7:0]    VGA_G;                     //    VGA Green[7:0]
     output    [7:0]    VGA_B;                   //    VGA Blue[7:0]
-	 output[9:0] LEDR;
+	
+	 
     
+	 
+	 
     wire reset;
     assign reset = KEY[0];
     
     // Create the colour, x, y and writeEn wires that are inputs to the controller.
 
-    wire [2:0] cCar,cbg;
-    wire [7:0] xbg,xcar;
-    wire [6:0] ybg,ycar;
+    wire [2:0] cCar,cbg,cPlayer;
+    wire [7:0] xbg,xcar,xplayer;
+    wire [6:0] ybg,ycar,yplayer;
 
 	 wire done;
     reg plot;
@@ -48,75 +61,102 @@ module fill
 	 reg [6:0] y;
 	 
 	 
-	 wire draw_enable,draw_reset,erase_enable;
+	 wire draw_enable,draw_reset,erase_enable,draw_player_enable;
     //wire Lx, Ly, Lc
 	 wire enable; //plot input to vgA adapter set to enable
     reg [2:0] DataColour;
 
 	 
-    assign go = ~KEY[3];
     //assign colour = SW[9:7];
 	 
-	 assign enable = ~KEY[2];
+	 assign enable = (draw_enable || erase_enable ||draw_player_enable); //Plot enable signal
 	 
 	 
-	 reg [7:0] xin;
-	 reg [6:0] yin;
+	 reg [7:0] xin,xPlayerIn;
+	 reg [6:0] yin,yPlayerIn;
 	 reg enable_rand;
 	 
 	 initial enable_rand = 0;
 	 initial xin <= 8'd33;
+	 initial xPlayerIn <= 8'd33;//left lane inital
+	 initial yPlayerIn <= 0;
 	 initial yin <=0;
-	 wire doneDraw;
-	 wire [2:0]lane_select;
-
 	 
+	 wire doneDraw,doneDrawPlayer;
+	 wire [2:0]lane_select;
 	
-	ctrlpath_generate U8342987(.clk(CLOCK_50),.resetn(1),.lane_enable(000),.draw_enable(draw_enable), .draw_reset(draw_reset), .erase_enable(erase_enable),.draw_done(doneDraw));
+	reg collideYes;
+	initial collideYes<=0; 
+	
+	ctrlpath_generate U8342987(.clk(CLOCK_50),.resetn(1),.lane_enable(000),.draw_enable(draw_enable),.collide_yes(collideYes), .draw_reset(draw_reset), .erase_enable(erase_enable),.draw_done(doneDraw),.draw_player_enable(draw_player_enable),.draw_player_done(doneDrawPlayer));
 	drawBackground dB(.clk(CLOCK_50), .reset(~reset), .enable(erase_enable), .x(xbg), .y(ybg),.colour(cbg));
 	drawCar U1000(.clk(CLOCK_50), .xin(xin), .yin(yin), .reset(~reset),.enable(draw_enable),.x(xcar),.y(ycar),.colour(cCar));
+	drawPlayer U2500(.clk(CLOCK_50), .reset(~reset), .enable(draw_player_enable), .xin(xPlayerIn), .yin(7'd89), .x(xplayer),.y(yplayer), .colour(cPlayer));
 	LFSR random(.clk(CLOCK_50),.i_Enable(enable_rand),.o_LFSR_Data(lane_select));
+	
+   decimalDisplay(!collideYes,CLOCK_50, HEX0, HEX1);
+	
 	 
 	 
-	always@(posedge CLOCK_50)
+	 //Select location of cars
+	always@(*)
 	begin
 		if (lane_select[0]==1)
 			xin<= 8'd33;
 		 else if (lane_select[1]==1)
 			xin<= 8'd69;
 		 else if (lane_select[2]==1)
-			xin<= 8'd106;
+			xin<= 8'd106;		
+		if(~KEY[1])begin
+			xPlayerIn<=8'd106;
+		end
+		else if(~KEY[2])begin
+			xPlayerIn<= 8'd69;
+		end
+		else if(~KEY[3])begin
+			xPlayerIn<=8'd33;
+		end
 	end
 	 
 	 
-	 always@(posedge CLOCK_50)
-	 begin
-		 if(draw_enable)
-			 begin
-				x<=xcar;
-				y<=ycar;
-				DataColour<=cCar;
-			end
-		
-		else if(erase_enable)
-			begin
-				x<=xbg;
-				y<=ybg;
-				DataColour<=cbg;
-			end
+	//Select which mif to read from based on the state 
+	always@(posedge CLOCK_50) begin
+		if(draw_enable) begin
+			x<=xcar;
+			y<=ycar;
+			DataColour<=cCar;
+		end
+		else if(draw_player_enable) begin
+			x<=xplayer;
+			y<=yplayer;
+			DataColour<=cPlayer;
+		end		
+		else if(erase_enable) begin
+			x<=xbg;
+			y<=ybg;
+			DataColour<=cbg;
+		end
 	end
-	assign LEDR[0]=erase_enable;
+	
+	assign LEDR[0]=draw_player_enable;
 
+
+	
+	//Animate the random car, and determine when to generate a new one
 	always@(negedge doneDraw)	
 	begin
-		yin<=yin+1;
-		if(yin==7'd89)
-		begin 
-			yin<=0;
-			enable_rand<=1;
-		end
-		else enable_rand<=0;
+			yin<=yin+7'b1;
+			if((xin==xPlayerIn) && (yin+8'd30>=8'd89)) collideYes<=1'd1;
+			else begin
+				if(yin==7'd119) 
+					yin<=0;
+				else if(yin == 7'd68)
+					enable_rand<=1;
+				else enable_rand<=0;
+			end
 	end	
+	assign LEDR[9]=collideYes;
+	
 	
     // Create an Instance of a VGA controller - there can be only one!
     // Define the number of colours as well as the initial background
@@ -127,7 +167,7 @@ module fill
             .colour(DataColour),
             .x(x),
             .y(y),
-            .plot(draw_enable||erase_enable),
+            .plot(enable),
             /* Signals for the DAC to drive the monitor. */
             .VGA_R(VGA_R),
             .VGA_G(VGA_G),
@@ -141,7 +181,155 @@ module fill
         defparam VGA.MONOCHROME = "FALSE";
         defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
         defparam VGA.BACKGROUND_IMAGE = "crappy road.mif";
-            
+endmodule
+
+
+module drawBackground(input clk, reset, enable, output[7:0] x, output [6:0] y, output [2:0] colour);
+		backgroundImage bG(.address(memCounter),.clock(clk),.q(colour));//iterate through address and read colour from memory
+		
+	//assign ledr = memCounter;
+	
+	reg[14:0] memCounter;// = 10'b1;
+	reg[7:0] xCounter;// = 8'b0;
+	reg[6:0] yCounter;// = 8'b0;
+	initial begin
+		memCounter = 10'b0;
+		xCounter = 8'b0;
+		yCounter = 7'b0;
+	end
+	
+	reg done = 1'b0;
+	
+	always@(posedge clk) begin
+		if(reset == 1)begin
+			xCounter <= 8'b0;
+			yCounter <= 7'b0;
+			memCounter <= 15'b0;
+		end
+		else if(enable)begin
+			if (memCounter < 15'd19200) begin
+				if(xCounter < 8'd159)begin
+					xCounter <= xCounter +  1'b1;
+				end
+				else begin
+					xCounter <= 0;
+					yCounter <= yCounter + 1'b1;
+				end
+				memCounter <= memCounter + 1'b1;
+			end
+			else begin
+				xCounter <= 8'b0;
+				yCounter <= 7'b0;
+				memCounter <= 15'b0;
+			end
+		end
+	end
+	
+	assign x = xCounter;
+	assign y = yCounter;
+
+endmodule
+
+
+module drawCar(input clk, reset, enable, input [7:0] xin, input[6:0] yin, output[7:0] x, output [6:0] y, output [2:0] colour);
+	oppCar U100(.address(memCounter),.clock(clk),.q(colour));//iterate through address and read colour from memory
+																						 //This image is 21 x 30 px	
+	reg[9:0] memCounter;// = 10'b1;
+	reg[7:0] xCounter;// = 8'b0;
+	reg[6:0] yCounter;// = 8'b0;
+	initial begin
+		memCounter = 10'b0;
+		xCounter = 8'b0;
+		yCounter = 7'b0;
+	end
+		
+	always@(posedge clk) begin
+		if(reset == 1)begin
+			xCounter <= 8'b0;
+			yCounter <= 7'b0;
+			memCounter <= 10'b0;
+		end
+		else if(enable)begin
+			if (memCounter < 10'b1001110110) begin 
+				if(xCounter < 8'b10100)begin
+					xCounter <= xCounter +  1'b1;
+				end
+				else begin
+					xCounter <= 0;
+					if(yin + yCounter < 7'd120)
+						yCounter <= yCounter + 1'b1;
+						
+				end
+				memCounter <= memCounter + 1'b1;
+			end
+		end
+		else begin
+				xCounter <= 8'b0;
+				yCounter <= 7'b0;
+				memCounter <= 10'b0;
+			end
+	end
+	
+	assign x = xin+xCounter;
+	assign y = yin+yCounter;
+
+//	assign x = 8'b00100001+xCounter;
+//	assign y = 7'b1011000+yCounter;
+
+endmodule 
+
+module drawPlayer(input clk, reset, enable, input [7:0] xin, input[6:0] yin, output[7:0] x, output [6:0] y, output [2:0] colour);
+	playerCar U450(.address(memCounter),.clock(clk),.q(colour));//iterate through address and read colour from memory
+																						 //This image is 21 x 30 px	
+	reg[9:0] memCounter;// = 10'b1;
+	reg[7:0] xCounter;// = 8'b0;
+	reg[6:0] yCounter;// = 8'b0;
+	initial begin
+		memCounter = 10'b0;
+		xCounter = 8'b0;
+		yCounter = 7'b0;
+	end
+		
+	always@(posedge clk) begin
+		if(reset == 1)begin
+			xCounter <= 8'b0;
+			yCounter <= 7'b0;
+			memCounter <= 10'b0;
+		end
+		else if(enable)begin
+			if (memCounter < 10'b1001110110) begin 
+				if(xCounter < 8'b10100)begin
+					xCounter <= xCounter +  1'b1;
+				end
+				else begin
+					xCounter <= 0;
+					yCounter <= yCounter + 1'b1;
+						
+				end
+				memCounter <= memCounter + 1'b1;
+			end
+			else begin
+				xCounter <= 8'b0;
+				yCounter <= 7'b0;
+				memCounter <= 10'b0;
+			end
+		end
+	end
+	
+	assign x = xin+xCounter;
+	assign y = yin+yCounter;
+
+//	assign x = 8'b00100001+xCounter;
+//	assign y = 7'b1011000+yCounter;
+
+endmodule 
+
+
+/****************************************************************/
+
+
+
+
     // Put your code here. Your code should produce signals x,y,colour and writeEn
     // for the VGA controller, in addition to any other functionality your design may require.
 //    control C0(
@@ -174,7 +362,7 @@ module fill
 //        .yout(y)
 //    );
     
-endmodule
+//endmodule
 //
 //module control(clk, resetn, plot, enable, go, lx, ly, lc);
 //
@@ -299,95 +487,3 @@ endmodule
 //	backgroundImage bI(.address(addressCounter), .clock(clk), .q(cout));
 //
 //endmodule
-
-module drawBackground(input clk, reset, enable, output[7:0] x, output [6:0] y, output [2:0] colour);
-		backgroundImage bG(.address(memCounter),.clock(clk),.q(colour));//iterate through address and read colour from memory
-		
-	//assign ledr = memCounter;
-	
-	reg[14:0] memCounter;// = 10'b1;
-	reg[7:0] xCounter;// = 8'b0;
-	reg[6:0] yCounter;// = 8'b0;
-	initial begin
-		memCounter = 10'b0;
-		xCounter = 8'b0;
-		yCounter = 7'b0;
-	end
-	
-	reg done = 1'b0;
-	
-	always@(posedge clk) begin
-		if(reset == 1)begin
-			xCounter <= 8'b0;
-			yCounter <= 7'b0;
-			memCounter <= 15'b0;
-		end
-		else if(enable)begin
-			if (memCounter < 15'd19200) begin
-				if(xCounter < 8'd159)begin
-					xCounter <= xCounter +  1'b1;
-				end
-				else begin
-					xCounter <= 0;
-					yCounter <= yCounter + 1'b1;
-				end
-				memCounter <= memCounter + 1'b1;
-			end
-			else begin
-				xCounter <= 8'b0;
-				yCounter <= 7'b0;
-				memCounter <= 15'b0;
-			end
-		end
-	end
-	
-	assign x = xCounter;
-	assign y = yCounter;
-
-endmodule
-
-
-module drawCar(input clk, reset, enable, input [7:0] xin, input[6:0] yin, output[7:0] x, output [6:0] y, output [2:0] colour);
-	oppCar U100(.address(memCounter),.clock(clk),.q(colour));//iterate through address and read colour from memory
-																						 //This image is 21 x 30 px	
-	reg[9:0] memCounter;// = 10'b1;
-	reg[7:0] xCounter;// = 8'b0;
-	reg[6:0] yCounter;// = 8'b0;
-	initial begin
-		memCounter = 10'b0;
-		xCounter = 8'b0;
-		yCounter = 7'b0;
-	end
-		
-	always@(posedge clk) begin
-		if(reset == 1)begin
-			xCounter <= 8'b0;
-			yCounter <= 7'b0;
-			memCounter <= 10'b0;
-		end
-		else if(enable)begin
-			if (memCounter < 10'b1001110110) begin
-				if(xCounter < 8'b10100)begin
-					xCounter <= xCounter +  1'b1;
-				end
-				else begin
-					xCounter <= 0;
-					yCounter <= yCounter + 1'b1;
-				end
-				memCounter <= memCounter + 1'b1;
-			end
-			else begin
-				xCounter <= 8'b0;
-				yCounter <= 7'b0;
-				memCounter <= 10'b0;
-			end
-		end
-	end
-	
-	assign x = xin+xCounter;
-	assign y = yin+yCounter;
-
-//	assign x = 8'b00100001+xCounter;
-//	assign y = 7'b1011000+yCounter;
-
-endmodule 
