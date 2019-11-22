@@ -1,0 +1,38 @@
+module LFSR #(parameter NUM_BITS )
+  (
+   input i_Clk,
+   input i_Enable,
+ 
+	// Optional Seed Value
+   input i_Seed_DV,
+   input [NUM_BITS-1:0] i_Seed_Data,
+ 
+   output [2:0] o_LFSR_Data,
+   output o_LFSR_Done
+   );
+ 
+  reg [3:1] r_LFSR = 0;
+  reg              r_XNOR;
+ 
+ 
+  //run LFSR when enabled.
+  always @(posedge i_Clk)
+    begin
+      if (i_Enable == 1'b1)
+        begin
+            r_LFSR <= {r_LFSR[2:1], r_XNOR};
+        end
+    end
+	 
+  always @(*)
+    begin
+          r_XNOR = r_LFSR[3] ^~ r_LFSR[2];
+    end // always @ (*)
+ 
+ 
+  assign o_LFSR_Data = r_LFSR[3:1];
+ 
+  // Conditional Assignment (?)
+  assign o_LFSR_Done = (r_LFSR[3:1] == i_Seed_Data) ? 1'b1 : 1'b0;
+   
+endmodule // LFSR

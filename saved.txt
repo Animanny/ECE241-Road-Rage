@@ -1,0 +1,97 @@
+module ctrlpath_generate(clk,resetn,lane_enable,draw_enable, draw_reset);
+	
+	input resetn;
+	input clk;
+	input [2:0] lane_enable;//3 bit signal that describes where to put generated car
+	
+	output draw_enable; //Signal to draw
+	output draw_reset; //Signal that car has passed through the screen, generate new cars
+	
+	
+	wire wait_enable,draw_enable,erase_enable;
+	wire wait_done,draw_done,drawini_done,erase_done;
+	
+	
+	reg [2:0] current_state,next_state;
+	reg [1:0] lane_count;
+	reg [7:0] draw_count;
+	
+	
+	reg[10:0] draw_counter;//describes how many cycles we draw for
+	
+	
+	
+	localparam DRAW_INI=3'b000,DRAW=3'b001, WAIT=3'b010, ERASE=3'b011;
+//	localparam SPRITE_SIZE=1'b1, BG_SIZE=15'd3, WAIT_TIME=5'd5;
+//	
+//	
+//	
+//	
+//	//BG_SIZE=15'b100101100000000
+//	//wait time 22'b110010110101111010000;
+//	
+//	initial 
+//	draw_count<=7'd120;
+//	
+		
+	//Output signals
+	assign draw_enable = (current_state==DRAW || current_state==DRAW_INI);
+	assign wait_enable = (current_state==WAIT);
+	assign erase_enable= (current_state==ERASE);
+				
+
+	counter U1(clk,5'd1,draw_enable,drawini_done);
+	counter U2(clk,5'd5,draw_enable,draw_done); 
+	counter U3(clk,5'd5,wait_enable,wait_done);
+	counter U4(clk,5'd5,erase_enable,erase_done);
+	
+	always@(*)
+	begin: state_table
+		case(current_state)
+			DRAW_INI:begin
+					if(drawini_done==1'b1) 
+						begin
+							next_state=WAIT;
+							draw_count<=draw_count+1;
+						end
+					else next_state=DRAW_INI;
+				end
+			DRAW:begin
+					if(draw_done==1'b1)
+						begin
+							next_state=WAIT;
+							draw_count<=draw_count+1;
+						end
+					else next_state=DRAW;
+				end
+			WAIT:begin
+					if (wait_done==1'b1) next_state=ERASE;
+					else next_state=WAIT;
+				end
+			ERASE:begin
+						if(erase_done ==1'b1) next_state=DRAW;
+//						else if(draw_count==7'd120) 
+//							begin
+//								next_state=DRAW_INI;
+//								draw_counter<=2'd2;//(lane_enable[2]+lane_enable[1]+lane_enable[0])*SPRITE_SIZE;
+//								draw_count<=0;//reset draw count
+//							end						
+						else next_state=ERASE;
+					end
+			default: next_state=WAIT;
+		endcase
+	end //end state table
+	
+	//State register
+	always @(posedge clk)
+	begin: state_FFS
+		if(resetn ==1'b0)
+			current_state<=WAIT;
+		else
+			current_state<=next_state;
+	end
+	
+
+	
+endmodule
+

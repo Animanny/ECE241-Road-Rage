@@ -1,0 +1,1 @@
+module datapath(input draw_enable, erase_enable, xcar,ycar)

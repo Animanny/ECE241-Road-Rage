@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at fill.v(250): always construct contains both blocking and non-blocking assignments File: W:/Documents/vga_demo_verilog/fill.v Line: 250
+Info (10281): Verilog HDL Declaration information at ctrlpath_generate.v(20): object "draw_counter" differs only in case from object "DRAW_COUNTER" in the same scope File: W:/ece241/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 20

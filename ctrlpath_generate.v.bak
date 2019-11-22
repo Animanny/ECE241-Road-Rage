@@ -1,0 +1,3 @@
+module ctrlpath(generateCar, y_loc, draw_enable, clk, x_player)
+	
+	input [2:0]generateCar;
