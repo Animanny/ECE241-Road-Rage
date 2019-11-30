@@ -1,5 +1,5 @@
 Flow report for vga_demo
-Thu Nov 21 21:22:24 2019
+Fri Nov 29 11:32:47 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov 21 21:22:04 2019           ;
+; Flow Status                     ; Successful - Fri Nov 29 11:32:26 2019           ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                   ; vga_demo                                        ;
 ; Top-level Entity Name           ; fill                                            ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CSEMA5F31C6                                    ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 160 / 32,070 ( < 1 % )                          ;
-; Total registers                 ; 212                                             ;
-; Total pins                      ; 54 / 457 ( 12 % )                               ;
+; Logic utilization (in ALMs)     ; 422 / 32,070 ( 1 % )                            ;
+; Total registers                 ; 445                                             ;
+; Total pins                      ; 111 / 457 ( 24 % )                              ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 117,090 / 4,065,280 ( 3 % )                     ;
+; Total block memory bits         ; 133,614 / 4,065,280 ( 3 % )                     ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                                  ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2019 21:20:26 ;
+; Start date & time ; 11/29/2019 11:30:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; vga_demo            ;
 +-------------------+---------------------+
@@ -78,12 +78,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 167746773791345.157438922500760        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 167746773791903.157504503706592        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; playerCar_bb.v                         ; --            ; --          ; --         ;
 ; MISC_FILE                           ; backgroundImage_bb.v                   ; --            ; --          ; --         ;
 ; MISC_FILE                           ; oppCar_bb.v                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; niceBG_bb.v                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; gameOver_bb.v                          ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; fill        ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; fill        ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; fill        ; Top        ;
@@ -96,11 +98,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 742 MB              ; 00:00:27                           ;
-; Fitter               ; 00:00:42     ; 1.1                     ; 2657 MB             ; 00:01:17                           ;
-; Assembler            ; 00:00:11     ; 1.0                     ; 728 MB              ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:17     ; 1.1                     ; 1078 MB             ; 00:00:09                           ;
-; Total                ; 00:01:39     ; --                      ; --                  ; 00:02:01                           ;
+; Analysis & Synthesis ; 00:00:38     ; 1.0                     ; 761 MB              ; 00:00:31                           ;
+; Fitter               ; 00:00:44     ; 1.1                     ; 2659 MB             ; 00:01:20                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 735 MB              ; 00:00:08                           ;
+; Timing Analyzer      ; 00:00:19     ; 1.1                     ; 1096 MB             ; 00:00:12                           ;
+; Total                ; 00:01:52     ; --                      ; --                  ; 00:02:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,10 +111,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; BA3135WS24       ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; BA3135WS24       ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; BA3135WS24       ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; BA3135WS24       ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; BA3165WS15       ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; BA3165WS15       ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; BA3165WS15       ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; BA3165WS15       ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at ctrlpath_generate.v(20): object "draw_counter" differs only in case from object "DRAW_COUNTER" in the same scope File: W:/ece241/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 20
+Info (10281): Verilog HDL Declaration information at ctrlpath_generate.v(24): object "DRAW_COUNTER" differs only in case from object "draw_counter" in the same scope File: W:/Documents/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 24

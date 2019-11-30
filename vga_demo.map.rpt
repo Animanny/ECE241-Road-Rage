@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga_demo
-Thu Nov 21 21:20:55 2019
+Fri Nov 29 11:31:16 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -15,33 +15,48 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |fill|ctrlpath_generate:U8342987|current_state
+ 10. State Machine - |fill|ctrlpath_generate:ctrlpath|current_state
  11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated
- 16. Source assignments for drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component|altsyncram_etf1:auto_generated
- 17. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated
- 18. Parameter Settings for User Entity Instance: drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component
- 19. Parameter Settings for User Entity Instance: drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component
- 20. Parameter Settings for User Entity Instance: vga_adapter:VGA
- 21. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
- 22. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
- 23. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 24. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
- 25. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 26. altsyncram Parameter Settings by Entity Instance
- 27. altpll Parameter Settings by Entity Instance
- 28. Port Connectivity Checks: "vga_adapter:VGA"
- 29. Port Connectivity Checks: "ctrlpath_generate:U8342987|counter:U3"
- 30. Port Connectivity Checks: "ctrlpath_generate:U8342987|counter:U2"
- 31. Port Connectivity Checks: "ctrlpath_generate:U8342987|counter:U1"
- 32. Port Connectivity Checks: "ctrlpath_generate:U8342987"
- 33. Post-Synthesis Netlist Statistics for Top Partition
- 34. Elapsed Time Per Partition
- 35. Analysis & Synthesis Messages
- 36. Analysis & Synthesis Suppressed Messages
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated
+ 17. Source assignments for drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component|altsyncram_etf1:auto_generated
+ 18. Source assignments for drawCar:U2000|oppCar:U100|altsyncram:altsyncram_component|altsyncram_etf1:auto_generated
+ 19. Source assignments for drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component|altsyncram_rrf1:auto_generated
+ 20. Source assignments for drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component|altsyncram_f3h1:auto_generated
+ 21. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_7sm1:auto_generated
+ 22. Parameter Settings for User Entity Instance: drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component
+ 24. Parameter Settings for User Entity Instance: drawCar:U2000|oppCar:U100|altsyncram:altsyncram_component
+ 25. Parameter Settings for User Entity Instance: drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component
+ 26. Parameter Settings for User Entity Instance: drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component
+ 27. Parameter Settings for User Entity Instance: vga_adapter:VGA
+ 28. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
+ 29. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
+ 30. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 31. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
+ 32. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. altpll Parameter Settings by Entity Instance
+ 35. Port Connectivity Checks: "vga_adapter:VGA"
+ 36. Port Connectivity Checks: "drawGameOver:over"
+ 37. Port Connectivity Checks: "drawPlayer:U2500"
+ 38. Port Connectivity Checks: "drawCar:U2000"
+ 39. Port Connectivity Checks: "drawCar:U1000"
+ 40. Port Connectivity Checks: "drawBackground:dB"
+ 41. Port Connectivity Checks: "ctrlpath_generate:ctrlpath|counter:U4"
+ 42. Port Connectivity Checks: "ctrlpath_generate:ctrlpath|counter:U3"
+ 43. Port Connectivity Checks: "ctrlpath_generate:ctrlpath|counter:U2"
+ 44. Port Connectivity Checks: "ctrlpath_generate:ctrlpath|counter:U5"
+ 45. Port Connectivity Checks: "ctrlpath_generate:ctrlpath|counter:U1"
+ 46. Port Connectivity Checks: "ctrlpath_generate:ctrlpath|seg7decoder:kmn"
+ 47. Port Connectivity Checks: "ctrlpath_generate:ctrlpath"
+ 48. Post-Synthesis Netlist Statistics for Top Partition
+ 49. Elapsed Time Per Partition
+ 50. Analysis & Synthesis Messages
+ 51. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -67,16 +82,16 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 21 21:20:55 2019           ;
+; Analysis & Synthesis Status     ; Successful - Fri Nov 29 11:31:16 2019           ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                   ; vga_demo                                        ;
 ; Top-level Entity Name           ; fill                                            ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 203                                             ;
-; Total pins                      ; 54                                              ;
+; Total registers                 ; 394                                             ;
+; Total pins                      ; 111                                             ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 117,090                                         ;
+; Total block memory bits         ; 133,614                                         ;
 ; Total DSP Blocks                ; 0                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -187,48 +202,62 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+--------------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path     ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                            ; Library ;
-+--------------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
-; vga_adapter/vga_pll.v                ; yes             ; User Wizard-Generated File             ; W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_pll.v                 ;         ;
-; vga_adapter/vga_adapter.v            ; yes             ; User Verilog HDL File                  ; W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v             ;         ;
-; vga_adapter/vga_address_translator.v ; yes             ; User Verilog HDL File                  ; W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_address_translator.v  ;         ;
-; vga_adapter/vga_controller.v         ; yes             ; User Verilog HDL File                  ; W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_controller.v          ;         ;
-; fill.v                               ; yes             ; User Verilog HDL File                  ; W:/ece241/ECE241-Road-Rage-master/fill.v                                ;         ;
-; backgroundImage.v                    ; yes             ; User Wizard-Generated File             ; W:/ece241/ECE241-Road-Rage-master/backgroundImage.v                     ;         ;
-; LFSR.v                               ; yes             ; User Verilog HDL File                  ; W:/ece241/ECE241-Road-Rage-master/LFSR.v                                ;         ;
-; ctrlpath_generate.v                  ; yes             ; User Verilog HDL File                  ; W:/ece241/ECE241-Road-Rage-master/ctrlpath_generate.v                   ;         ;
-; counter.v                            ; yes             ; User Verilog HDL File                  ; W:/ece241/ECE241-Road-Rage-master/counter.v                             ;         ;
-; oppCar.v                             ; yes             ; User Wizard-Generated File             ; W:/ece241/ECE241-Road-Rage-master/oppCar.v                              ;         ;
-; altsyncram.tdf                       ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc                ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                          ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                       ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal180.inc                       ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/aglobal180.inc        ;         ;
-; a_rdenreg.inc                        ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                           ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                           ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                         ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_2og1.tdf               ; yes             ; Auto-Generated Megafunction            ; W:/ece241/ECE241-Road-Rage-master/db/altsyncram_2og1.tdf                ;         ;
-; crappy road.mif                      ; yes             ; Auto-Found Memory Initialization File  ; W:/ece241/ECE241-Road-Rage-master/crappy road.mif                       ;         ;
-; db/decode_01a.tdf                    ; yes             ; Auto-Generated Megafunction            ; W:/ece241/ECE241-Road-Rage-master/db/decode_01a.tdf                     ;         ;
-; db/mux_ifb.tdf                       ; yes             ; Auto-Generated Megafunction            ; W:/ece241/ECE241-Road-Rage-master/db/mux_ifb.tdf                        ;         ;
-; db/altsyncram_etf1.tdf               ; yes             ; Auto-Generated Megafunction            ; W:/ece241/ECE241-Road-Rage-master/db/altsyncram_etf1.tdf                ;         ;
-; Car3.mif                             ; yes             ; Auto-Found Memory Initialization File  ; W:/ece241/ECE241-Road-Rage-master/Car3.mif                              ;         ;
-; db/altsyncram_epm1.tdf               ; yes             ; Auto-Generated Megafunction            ; W:/ece241/ECE241-Road-Rage-master/db/altsyncram_epm1.tdf                ;         ;
-; db/decode_7la.tdf                    ; yes             ; Auto-Generated Megafunction            ; W:/ece241/ECE241-Road-Rage-master/db/decode_7la.tdf                     ;         ;
-; altpll.tdf                           ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altpll.tdf            ;         ;
-; stratix_pll.inc                      ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
-; stratixii_pll.inc                    ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
-; cycloneii_pll.inc                    ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/altpll_80u.tdf                    ; yes             ; Auto-Generated Megafunction            ; W:/ece241/ECE241-Road-Rage-master/db/altpll_80u.tdf                     ;         ;
-+--------------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                ;
++--------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                              ; Library ;
++--------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
+; vga_adapter/vga_pll.v                ; yes             ; User Wizard-Generated File             ; W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_pll.v                ;         ;
+; vga_adapter/vga_adapter.v            ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v            ;         ;
+; vga_adapter/vga_address_translator.v ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_address_translator.v ;         ;
+; vga_adapter/vga_controller.v         ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_controller.v         ;         ;
+; fill.v                               ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/fill.v                               ;         ;
+; playerCar.v                          ; yes             ; User Wizard-Generated File             ; W:/Documents/ECE241-Road-Rage-master/playerCar.v                          ;         ;
+; backgroundImage.v                    ; yes             ; User Wizard-Generated File             ; W:/Documents/ECE241-Road-Rage-master/backgroundImage.v                    ;         ;
+; LFSR.v                               ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/LFSR.v                               ;         ;
+; ctrlpath_generate.v                  ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/ctrlpath_generate.v                  ;         ;
+; decimalDisplay.v                     ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/decimalDisplay.v                     ;         ;
+; counter.v                            ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/counter.v                            ;         ;
+; oppCar.v                             ; yes             ; User Wizard-Generated File             ; W:/Documents/ECE241-Road-Rage-master/oppCar.v                             ;         ;
+; drawPlayer.v                         ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/drawPlayer.v                         ;         ;
+; drawCar.v                            ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/drawCar.v                            ;         ;
+; drawBackground.v                     ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/drawBackground.v                     ;         ;
+; drawGameOver.v                       ; yes             ; User Verilog HDL File                  ; W:/Documents/ECE241-Road-Rage-master/drawGameOver.v                       ;         ;
+; gameOver.v                           ; yes             ; User Wizard-Generated File             ; W:/Documents/ECE241-Road-Rage-master/gameOver.v                           ;         ;
+; altsyncram.tdf                       ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc                ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                          ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                       ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; aglobal180.inc                       ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/aglobal180.inc          ;         ;
+; a_rdenreg.inc                        ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                           ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                           ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                         ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_2og1.tdf               ; yes             ; Auto-Generated Megafunction            ; W:/Documents/ECE241-Road-Rage-master/db/altsyncram_2og1.tdf               ;         ;
+; crappy road.mif                      ; yes             ; Auto-Found Memory Initialization File  ; W:/Documents/ECE241-Road-Rage-master/crappy road.mif                      ;         ;
+; db/decode_01a.tdf                    ; yes             ; Auto-Generated Megafunction            ; W:/Documents/ECE241-Road-Rage-master/db/decode_01a.tdf                    ;         ;
+; db/mux_ifb.tdf                       ; yes             ; Auto-Generated Megafunction            ; W:/Documents/ECE241-Road-Rage-master/db/mux_ifb.tdf                       ;         ;
+; db/altsyncram_etf1.tdf               ; yes             ; Auto-Generated Megafunction            ; W:/Documents/ECE241-Road-Rage-master/db/altsyncram_etf1.tdf               ;         ;
+; car3.mif                             ; yes             ; Auto-Found Memory Initialization File  ; W:/Documents/ECE241-Road-Rage-master/car3.mif                             ;         ;
+; db/altsyncram_rrf1.tdf               ; yes             ; Auto-Generated Megafunction            ; W:/Documents/ECE241-Road-Rage-master/db/altsyncram_rrf1.tdf               ;         ;
+; car.mif                              ; yes             ; Auto-Found Memory Initialization File  ; W:/Documents/ECE241-Road-Rage-master/car.mif                              ;         ;
+; db/altsyncram_f3h1.tdf               ; yes             ; Auto-Generated Megafunction            ; W:/Documents/ECE241-Road-Rage-master/db/altsyncram_f3h1.tdf               ;         ;
+; gameoverwindow.mif                   ; yes             ; Auto-Found Memory Initialization File  ; W:/Documents/ECE241-Road-Rage-master/gameoverwindow.mif                   ;         ;
+; db/altsyncram_7sm1.tdf               ; yes             ; Auto-Generated Megafunction            ; W:/Documents/ECE241-Road-Rage-master/db/altsyncram_7sm1.tdf               ;         ;
+; startscreen.mif                      ; yes             ; Auto-Found Memory Initialization File  ; W:/Documents/ECE241-Road-Rage-master/startscreen.mif                      ;         ;
+; db/decode_7la.tdf                    ; yes             ; Auto-Generated Megafunction            ; W:/Documents/ECE241-Road-Rage-master/db/decode_7la.tdf                    ;         ;
+; altpll.tdf                           ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altpll.tdf              ;         ;
+; stratix_pll.inc                      ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/stratix_pll.inc         ;         ;
+; stratixii_pll.inc                    ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/stratixii_pll.inc       ;         ;
+; cycloneii_pll.inc                    ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/cycloneii_pll.inc       ;         ;
+; db/altpll_80u.tdf                    ; yes             ; Auto-Generated Megafunction            ; W:/Documents/ECE241-Road-Rage-master/db/altpll_80u.tdf                    ;         ;
++--------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -236,20 +265,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 159            ;
+; Estimate of Logic utilization (ALMs needed) ; 416            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 290            ;
-;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 26             ;
-;     -- 5 input functions                    ; 28             ;
-;     -- 4 input functions                    ; 12             ;
-;     -- <=3 input functions                  ; 224            ;
+; Combinational ALUT usage for logic          ; 706            ;
+;     -- 7 input functions                    ; 1              ;
+;     -- 6 input functions                    ; 123            ;
+;     -- 5 input functions                    ; 72             ;
+;     -- 4 input functions                    ; 57             ;
+;     -- <=3 input functions                  ; 453            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 203            ;
+; Dedicated logic registers                   ; 394            ;
 ;                                             ;                ;
-; I/O pins                                    ; 54             ;
+; I/O pins                                    ; 111            ;
 ; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 117090         ;
+; Total block memory bits                     ; 133614         ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
@@ -257,9 +286,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 109            ;
-; Total fan-out                               ; 2015           ;
-; Average fan-out                             ; 3.23           ;
+; Maximum fan-out                             ; 265            ;
+; Total fan-out                               ; 4342           ;
+; Average fan-out                             ; 3.21           ;
 +---------------------------------------------+----------------+
 
 
@@ -268,27 +297,45 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Entity Name            ; Library Name ;
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |fill                                                   ; 290 (22)            ; 203 (29)                  ; 117090            ; 0          ; 54   ; 0            ; |fill                                                                                                                            ; fill                   ; work         ;
-;    |LFSR:random|                                        ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|LFSR:random                                                                                                                ; LFSR                   ; work         ;
-;    |ctrlpath_generate:U8342987|                         ; 113 (3)             ; 84 (3)                    ; 0                 ; 0          ; 0    ; 0            ; |fill|ctrlpath_generate:U8342987                                                                                                 ; ctrlpath_generate      ; work         ;
-;       |counter:U1|                                      ; 37 (37)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |fill|ctrlpath_generate:U8342987|counter:U1                                                                                      ; counter                ; work         ;
-;       |counter:U2|                                      ; 37 (37)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |fill|ctrlpath_generate:U8342987|counter:U2                                                                                      ; counter                ; work         ;
-;       |counter:U3|                                      ; 36 (36)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |fill|ctrlpath_generate:U8342987|counter:U3                                                                                      ; counter                ; work         ;
-;    |drawBackground:dB|                                  ; 40 (37)             ; 32 (30)                   ; 57600             ; 0          ; 0    ; 0            ; |fill|drawBackground:dB                                                                                                          ; drawBackground         ; work         ;
+; |fill                                                   ; 706 (154)           ; 394 (47)                  ; 133614            ; 0          ; 111  ; 0            ; |fill                                                                                                                            ; fill                   ; work         ;
+;    |LFSR:random|                                        ; 2 (2)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|LFSR:random                                                                                                                ; LFSR                   ; work         ;
+;    |ctrlpath_generate:ctrlpath|                         ; 207 (14)            ; 142 (7)                   ; 0                 ; 0          ; 0    ; 0            ; |fill|ctrlpath_generate:ctrlpath                                                                                                 ; ctrlpath_generate      ; work         ;
+;       |counter:U1|                                      ; 37 (37)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |fill|ctrlpath_generate:ctrlpath|counter:U1                                                                                      ; counter                ; work         ;
+;       |counter:U2|                                      ; 37 (37)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |fill|ctrlpath_generate:ctrlpath|counter:U2                                                                                      ; counter                ; work         ;
+;       |counter:U3|                                      ; 42 (42)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |fill|ctrlpath_generate:ctrlpath|counter:U3                                                                                      ; counter                ; work         ;
+;       |counter:U4|                                      ; 36 (36)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |fill|ctrlpath_generate:ctrlpath|counter:U4                                                                                      ; counter                ; work         ;
+;       |counter:U5|                                      ; 37 (37)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |fill|ctrlpath_generate:ctrlpath|counter:U5                                                                                      ; counter                ; work         ;
+;       |seg7decoder:kmn|                                 ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|ctrlpath_generate:ctrlpath|seg7decoder:kmn                                                                                 ; seg7decoder            ; work         ;
+;    |decimalDisplay:displayhexstuff|                     ; 64 (49)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |fill|decimalDisplay:displayhexstuff                                                                                             ; decimalDisplay         ; work         ;
+;       |seg7decoder:u1|                                  ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|decimalDisplay:displayhexstuff|seg7decoder:u1                                                                              ; seg7decoder            ; work         ;
+;       |seg7decoder:u2|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|decimalDisplay:displayhexstuff|seg7decoder:u2                                                                              ; seg7decoder            ; work         ;
+;    |drawBackground:dB|                                  ; 39 (36)             ; 32 (30)                   ; 57600             ; 0          ; 0    ; 0            ; |fill|drawBackground:dB                                                                                                          ; drawBackground         ; work         ;
 ;       |backgroundImage:bG|                              ; 3 (0)               ; 2 (0)                     ; 57600             ; 0          ; 0    ; 0            ; |fill|drawBackground:dB|backgroundImage:bG                                                                                       ; backgroundImage        ; work         ;
 ;          |altsyncram:altsyncram_component|              ; 3 (0)               ; 2 (0)                     ; 57600             ; 0          ; 0    ; 0            ; |fill|drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component                                                       ; altsyncram             ; work         ;
 ;             |altsyncram_2og1:auto_generated|            ; 3 (0)               ; 2 (2)                     ; 57600             ; 0          ; 0    ; 0            ; |fill|drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated                        ; altsyncram_2og1        ; work         ;
 ;                |decode_01a:rden_decode|                 ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated|decode_01a:rden_decode ; decode_01a             ; work         ;
-;    |drawCar:U1000|                                      ; 47 (47)             ; 25 (25)                   ; 1890              ; 0          ; 0    ; 0            ; |fill|drawCar:U1000                                                                                                              ; drawCar                ; work         ;
+;    |drawCar:U1000|                                      ; 38 (38)             ; 25 (25)                   ; 1890              ; 0          ; 0    ; 0            ; |fill|drawCar:U1000                                                                                                              ; drawCar                ; work         ;
 ;       |oppCar:U100|                                     ; 0 (0)               ; 0 (0)                     ; 1890              ; 0          ; 0    ; 0            ; |fill|drawCar:U1000|oppCar:U100                                                                                                  ; oppCar                 ; work         ;
 ;          |altsyncram:altsyncram_component|              ; 0 (0)               ; 0 (0)                     ; 1890              ; 0          ; 0    ; 0            ; |fill|drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component                                                                  ; altsyncram             ; work         ;
 ;             |altsyncram_etf1:auto_generated|            ; 0 (0)               ; 0 (0)                     ; 1890              ; 0          ; 0    ; 0            ; |fill|drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component|altsyncram_etf1:auto_generated                                   ; altsyncram_etf1        ; work         ;
+;    |drawCar:U2000|                                      ; 38 (38)             ; 25 (25)                   ; 1890              ; 0          ; 0    ; 0            ; |fill|drawCar:U2000                                                                                                              ; drawCar                ; work         ;
+;       |oppCar:U100|                                     ; 0 (0)               ; 0 (0)                     ; 1890              ; 0          ; 0    ; 0            ; |fill|drawCar:U2000|oppCar:U100                                                                                                  ; oppCar                 ; work         ;
+;          |altsyncram:altsyncram_component|              ; 0 (0)               ; 0 (0)                     ; 1890              ; 0          ; 0    ; 0            ; |fill|drawCar:U2000|oppCar:U100|altsyncram:altsyncram_component                                                                  ; altsyncram             ; work         ;
+;             |altsyncram_etf1:auto_generated|            ; 0 (0)               ; 0 (0)                     ; 1890              ; 0          ; 0    ; 0            ; |fill|drawCar:U2000|oppCar:U100|altsyncram:altsyncram_component|altsyncram_etf1:auto_generated                                   ; altsyncram_etf1        ; work         ;
+;    |drawGameOver:over|                                  ; 69 (69)             ; 30 (30)                   ; 12744             ; 0          ; 0    ; 0            ; |fill|drawGameOver:over                                                                                                          ; drawGameOver           ; work         ;
+;       |gameOver:gameover|                               ; 0 (0)               ; 0 (0)                     ; 12744             ; 0          ; 0    ; 0            ; |fill|drawGameOver:over|gameOver:gameover                                                                                        ; gameOver               ; work         ;
+;          |altsyncram:altsyncram_component|              ; 0 (0)               ; 0 (0)                     ; 12744             ; 0          ; 0    ; 0            ; |fill|drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component                                                        ; altsyncram             ; work         ;
+;             |altsyncram_f3h1:auto_generated|            ; 0 (0)               ; 0 (0)                     ; 12744             ; 0          ; 0    ; 0            ; |fill|drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component|altsyncram_f3h1:auto_generated                         ; altsyncram_f3h1        ; work         ;
+;    |drawPlayer:U2500|                                   ; 30 (30)             ; 25 (25)                   ; 1890              ; 0          ; 0    ; 0            ; |fill|drawPlayer:U2500                                                                                                           ; drawPlayer             ; work         ;
+;       |playerCar:U450|                                  ; 0 (0)               ; 0 (0)                     ; 1890              ; 0          ; 0    ; 0            ; |fill|drawPlayer:U2500|playerCar:U450                                                                                            ; playerCar              ; work         ;
+;          |altsyncram:altsyncram_component|              ; 0 (0)               ; 0 (0)                     ; 1890              ; 0          ; 0    ; 0            ; |fill|drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component                                                            ; altsyncram             ; work         ;
+;             |altsyncram_rrf1:auto_generated|            ; 0 (0)               ; 0 (0)                     ; 1890              ; 0          ; 0    ; 0            ; |fill|drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component|altsyncram_rrf1:auto_generated                             ; altsyncram_rrf1        ; work         ;
 ;    |vga_adapter:VGA|                                    ; 65 (2)              ; 30 (0)                    ; 57600             ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA                                                                                                            ; vga_adapter            ; work         ;
 ;       |altsyncram:VideoMemory|                          ; 9 (0)               ; 4 (0)                     ; 57600             ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|altsyncram:VideoMemory                                                                                     ; altsyncram             ; work         ;
-;          |altsyncram_epm1:auto_generated|               ; 9 (0)               ; 4 (4)                     ; 57600             ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated                                                      ; altsyncram_epm1        ; work         ;
-;             |decode_01a:rden_decode_b|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated|decode_01a:rden_decode_b                             ; decode_01a             ; work         ;
-;             |decode_7la:decode2|                        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated|decode_7la:decode2                                   ; decode_7la             ; work         ;
-;             |mux_ifb:mux3|                              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated|mux_ifb:mux3                                         ; mux_ifb                ; work         ;
+;          |altsyncram_7sm1:auto_generated|               ; 9 (0)               ; 4 (4)                     ; 57600             ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_7sm1:auto_generated                                                      ; altsyncram_7sm1        ; work         ;
+;             |decode_01a:rden_decode_b|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_7sm1:auto_generated|decode_01a:rden_decode_b                             ; decode_01a             ; work         ;
+;             |decode_7la:decode2|                        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_7sm1:auto_generated|decode_7la:decode2                                   ; decode_7la             ; work         ;
+;             |mux_ifb:mux3|                              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_7sm1:auto_generated|mux_ifb:mux3                                         ; mux_ifb                ; work         ;
 ;       |vga_address_translator:user_input_translator|    ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|vga_address_translator:user_input_translator                                                               ; vga_address_translator ; work         ;
 ;       |vga_controller:controller|                       ; 42 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|vga_controller:controller                                                                                  ; vga_controller         ; work         ;
 ;          |vga_address_translator:controller_translator| ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fill|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator                                     ; vga_address_translator ; work         ;
@@ -299,15 +346,18 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                               ;
-+----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------+
-; Name                                                                                                           ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF             ;
-+----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------+
-; drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 19200        ; 3            ; --           ; --           ; 57600 ; crappy road.mif ;
-; drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component|altsyncram_etf1:auto_generated|ALTSYNCRAM            ; AUTO ; ROM              ; 630          ; 3            ; --           ; --           ; 1890  ; Car3.mif        ;
-; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated|ALTSYNCRAM                               ; AUTO ; Simple Dual Port ; 19200        ; 3            ; 19200        ; 3            ; 57600 ; crappy road.mif ;
-+----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+-----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                  ;
++----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+--------------------+
+; Name                                                                                                           ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                ;
++----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+--------------------+
+; drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 19200        ; 3            ; --           ; --           ; 57600 ; crappy road.mif    ;
+; drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component|altsyncram_etf1:auto_generated|ALTSYNCRAM            ; AUTO ; ROM              ; 630          ; 3            ; --           ; --           ; 1890  ; Car3.mif           ;
+; drawCar:U2000|oppCar:U100|altsyncram:altsyncram_component|altsyncram_etf1:auto_generated|ALTSYNCRAM            ; AUTO ; ROM              ; 630          ; 3            ; --           ; --           ; 1890  ; Car3.mif           ;
+; drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component|altsyncram_f3h1:auto_generated|ALTSYNCRAM  ; AUTO ; ROM              ; 4248         ; 3            ; --           ; --           ; 12744 ; gameOverWindow.mif ;
+; drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component|altsyncram_rrf1:auto_generated|ALTSYNCRAM      ; AUTO ; ROM              ; 630          ; 3            ; --           ; --           ; 1890  ; car.mif            ;
+; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_7sm1:auto_generated|ALTSYNCRAM                               ; AUTO ; Simple Dual Port ; 19200        ; 3            ; 19200        ; 3            ; 57600 ; startScreen.mif    ;
++----------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+--------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------+
@@ -316,20 +366,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                            ; IP Include File   ;
 +--------+--------------+---------+--------------+--------------+--------------------------------------------+-------------------+
 ; Altera ; ROM: 1-PORT  ; 18.0    ; N/A          ; N/A          ; |fill|drawCar:U1000|oppCar:U100            ; oppCar.v          ;
+; Altera ; ROM: 1-PORT  ; 18.0    ; N/A          ; N/A          ; |fill|drawCar:U2000|oppCar:U100            ; oppCar.v          ;
+; Altera ; ROM: 1-PORT  ; 18.0    ; N/A          ; N/A          ; |fill|drawPlayer:U2500|playerCar:U450      ; playerCar.v       ;
 ; Altera ; ROM: 1-PORT  ; 18.0    ; N/A          ; N/A          ; |fill|drawBackground:dB|backgroundImage:bG ; backgroundImage.v ;
+; Altera ; ROM: 1-PORT  ; 18.0    ; N/A          ; N/A          ; |fill|drawGameOver:over|gameOver:gameover  ; gameOver.v        ;
 +--------+--------------+---------+--------------+--------------+--------------------------------------------+-------------------+
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------+
-; State Machine - |fill|ctrlpath_generate:U8342987|current_state                      ;
-+---------------------+---------------------+--------------------+--------------------+
-; Name                ; current_state.ERASE ; current_state.DRAW ; current_state.WAIT ;
-+---------------------+---------------------+--------------------+--------------------+
-; current_state.WAIT  ; 0                   ; 0                  ; 0                  ;
-; current_state.DRAW  ; 0                   ; 1                  ; 1                  ;
-; current_state.ERASE ; 1                   ; 0                  ; 1                  ;
-+---------------------+---------------------+--------------------+--------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |fill|ctrlpath_generate:ctrlpath|current_state                                                                                                                           ;
++--------------------------+---------------------+------------------------+--------------------+---------------------+--------------------+--------------------------+---------------------+
+; Name                     ; current_state.ERASE ; current_state.GAMEOVER ; current_state.WAIT ; current_state.DRAW2 ; current_state.DRAW ; current_state.DRAWPLAYER ; current_state.START ;
++--------------------------+---------------------+------------------------+--------------------+---------------------+--------------------+--------------------------+---------------------+
+; current_state.START      ; 0                   ; 0                      ; 0                  ; 0                   ; 0                  ; 0                        ; 0                   ;
+; current_state.DRAWPLAYER ; 0                   ; 0                      ; 0                  ; 0                   ; 0                  ; 1                        ; 1                   ;
+; current_state.DRAW       ; 0                   ; 0                      ; 0                  ; 0                   ; 1                  ; 0                        ; 1                   ;
+; current_state.DRAW2      ; 0                   ; 0                      ; 0                  ; 1                   ; 0                  ; 0                        ; 1                   ;
+; current_state.WAIT       ; 0                   ; 0                      ; 1                  ; 0                   ; 0                  ; 0                        ; 1                   ;
+; current_state.GAMEOVER   ; 0                   ; 1                      ; 0                  ; 0                   ; 0                  ; 0                        ; 1                   ;
+; current_state.ERASE      ; 1                   ; 0                      ; 0                  ; 0                   ; 0                  ; 0                        ; 1                   ;
++--------------------------+---------------------+------------------------+--------------------+---------------------+--------------------+--------------------------+---------------------+
 
 
 +-------------------------------------------------------------------------------------+
@@ -337,14 +394,27 @@ Encoding Type:  One-Hot
 +--------------------------------------------+----------------------------------------+
 ; Register name                              ; Reason for Removal                     ;
 +--------------------------------------------+----------------------------------------+
-; xin[3]                                     ; Merged with xin[1]                     ;
 ; xin[7]                                     ; Merged with xin[4]                     ;
+; xin[3]                                     ; Merged with xin[1]                     ;
+; xin2[7]                                    ; Merged with xin2[4]                    ;
+; xin2[3]                                    ; Merged with xin2[1]                    ;
 ; xin[4]                                     ; Stuck at GND due to stuck port data_in ;
-; ctrlpath_generate:U8342987|current_state~4 ; Lost fanout                            ;
-; xin[0]                                     ; Merged with xin[1]                     ;
-; xin[2]                                     ; Merged with xin[5]                     ;
-; Total Number of Removed Registers = 6      ;                                        ;
+; ctrlpath_generate:ctrlpath|current_state~2 ; Lost fanout                            ;
+; ctrlpath_generate:ctrlpath|current_state~3 ; Lost fanout                            ;
+; ctrlpath_generate:ctrlpath|current_state~4 ; Lost fanout                            ;
+; xin2[4]                                    ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 9      ;                                        ;
 +--------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                        ;
++---------------+---------------------------+----------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------+---------------------------+----------------------------------------+
+; xin[4]        ; Stuck at GND              ; xin2[4]                                ;
+;               ; due to stuck port data_in ;                                        ;
++---------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -352,12 +422,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 203   ;
-; Number of registers using Synchronous Clear  ; 156   ;
-; Number of registers using Synchronous Load   ; 15    ;
+; Total registers                              ; 394   ;
+; Number of registers using Synchronous Clear  ; 324   ;
+; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 89    ;
+; Number of registers using Clock Enable       ; 215   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -367,9 +437,16 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; xin[5]                                 ; 2       ;
-; LFSR:random|r_LFSR[2]                  ; 5       ;
-; Total number of inverted registers = 2 ;         ;
+; LFSR:random|r_LFSR[2]                  ; 11      ;
+; xin[6]                                 ; 13      ;
+; xin[5]                                 ; 12      ;
+; xin[1]                                 ; 17      ;
+; xin2[6]                                ; 12      ;
+; xin2[5]                                ; 11      ;
+; xin2[1]                                ; 19      ;
+; xPlayerIn[0]                           ; 4       ;
+; xPlayerIn[5]                           ; 6       ;
+; Total number of inverted registers = 9 ;         ;
 +----------------------------------------+---------+
 
 
@@ -378,18 +455,34 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
-; 3:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |fill|y[6]                                                                                              ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |fill|vga_adapter:VGA|vga_controller:controller|yCounter[8]                                             ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |fill|drawBackground:dB|memCounter[12]                                                                  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |fill|drawCar:U1000|memCounter[2]                                                                       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |fill|xin[6]                                                                                            ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |fill|DataColour[2]                                                                                     ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |fill|drawBackground:dB|xCounter[5]                                                                     ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |fill|drawBackground:dB|yCounter[5]                                                                     ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |fill|drawCar:U1000|xCounter[7]                                                                         ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |fill|drawCar:U1000|yCounter[4]                                                                         ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |fill|xin[0]                                                                                            ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |fill|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated|mux_ifb:mux3|result_node[1] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |fill|vga_adapter:VGA|vga_controller:controller|yCounter[0]                                             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fill|drawGameOver:over|xCounter[0]                                                                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |fill|drawGameOver:over|yCounter[5]                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fill|drawPlayer:U2500|xCounter[0]                                                                      ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |fill|drawPlayer:U2500|yCounter[6]                                                                      ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |fill|drawCar:U2000|memCounter[2]                                                                       ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |fill|drawCar:U1000|memCounter[8]                                                                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fill|drawBackground:dB|xCounter[5]                                                                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |fill|drawBackground:dB|yCounter[6]                                                                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |fill|drawCar:U2000|yCounter[0]                                                                         ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |fill|drawCar:U1000|yCounter[2]                                                                         ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |fill|xPlayerIn[2]                                                                                      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |fill|yin[2]                                                                                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fill|drawCar:U2000|xCounter[3]                                                                         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |fill|drawCar:U1000|xCounter[4]                                                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |fill|x[2]                                                                                              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |fill|decimalDisplay:displayhexstuff|tens[0]                                                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |fill|xin2[2]                                                                                           ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |fill|y[0]                                                                                              ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |fill|decimalDisplay:displayhexstuff|ones[2]                                                            ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |fill|xin[0]                                                                                            ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |fill|DataColour[0]                                                                                     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |fill|xPlayerIn[5]                                                                                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |fill|xin2[1]                                                                                           ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |fill|xin[5]                                                                                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |fill|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_7sm1:auto_generated|mux_ifb:mux3|result_node[1] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |fill|drawGameOver:over|Add3                                                                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |fill|drawGameOver:over|Add3                                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
 
 
@@ -411,8 +504,35 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------+------+---------------------------------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for drawCar:U2000|oppCar:U100|altsyncram:altsyncram_component|altsyncram_etf1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                ;
++---------------------------------+--------------------+------+---------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                 ;
++---------------------------------+--------------------+------+---------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component|altsyncram_rrf1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                      ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                       ;
++---------------------------------+--------------------+------+---------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component|altsyncram_f3h1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                          ;
++---------------------------------+--------------------+------+-------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                           ;
++---------------------------------+--------------------+------+-------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------+
-; Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated ;
+; Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_7sm1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------+
 ; Assignment                      ; Value              ; From ; To                             ;
 +---------------------------------+--------------------+------+--------------------------------+
@@ -542,6 +662,189 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawCar:U2000|oppCar:U100|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                       ;
++------------------------------------+----------------------+--------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                    ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                             ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                    ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                    ;
+; WIDTH_A                            ; 3                    ; Signed Integer                             ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                             ;
+; NUMWORDS_A                         ; 630                  ; Signed Integer                             ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                    ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                    ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                    ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                    ;
+; WIDTH_B                            ; 1                    ; Untyped                                    ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                    ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                    ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                    ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                    ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                    ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                    ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                    ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                    ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                    ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                    ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                             ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                    ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                    ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                    ;
+; INIT_FILE                          ; Car3.mif             ; Untyped                                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                    ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                    ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                    ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                    ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                    ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                    ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                    ;
+; CBXI_PARAMETER                     ; altsyncram_etf1      ; Untyped                                    ;
++------------------------------------+----------------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                             ;
++------------------------------------+----------------------+--------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                          ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                   ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                          ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                          ;
+; WIDTH_A                            ; 3                    ; Signed Integer                                   ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                                   ;
+; NUMWORDS_A                         ; 630                  ; Signed Integer                                   ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                          ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                          ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                          ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                          ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                          ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                          ;
+; WIDTH_B                            ; 1                    ; Untyped                                          ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                          ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                          ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                          ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                          ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                          ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                          ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                          ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                          ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                          ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                          ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                          ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                          ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                          ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                   ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                          ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                          ;
+; INIT_FILE                          ; car.mif              ; Untyped                                          ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                          ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                          ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                          ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                          ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                          ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                          ;
+; CBXI_PARAMETER                     ; altsyncram_rrf1      ; Untyped                                          ;
++------------------------------------+----------------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                 ;
++------------------------------------+----------------------+------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                              ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                       ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                              ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                              ;
+; WIDTH_A                            ; 3                    ; Signed Integer                                       ;
+; WIDTHAD_A                          ; 13                   ; Signed Integer                                       ;
+; NUMWORDS_A                         ; 4248                 ; Signed Integer                                       ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                              ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                              ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                              ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                              ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                              ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                              ;
+; WIDTH_B                            ; 1                    ; Untyped                                              ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                              ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                              ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                              ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                              ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                              ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                              ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                              ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                              ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                              ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                              ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                              ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                              ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                              ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                              ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                       ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                              ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                              ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                              ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                              ;
+; INIT_FILE                          ; gameOverWindow.mif   ; Untyped                                              ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                              ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                              ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                              ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                              ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                              ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                              ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                              ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                              ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                              ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                              ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                              ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                              ;
+; CBXI_PARAMETER                     ; altsyncram_f3h1      ; Untyped                                              ;
++------------------------------------+----------------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: vga_adapter:VGA ;
 +-------------------------+-----------------+------------------+
@@ -550,7 +853,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; BITS_PER_COLOUR_CHANNEL ; 1               ; Signed Integer   ;
 ; MONOCHROME              ; FALSE           ; String           ;
 ; RESOLUTION              ; 160x120         ; String           ;
-; BACKGROUND_IMAGE        ; crappy road.mif ; String           ;
+; BACKGROUND_IMAGE        ; startScreen.mif ; String           ;
 +-------------------------+-----------------+------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -608,7 +911,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                 ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
-; INIT_FILE                          ; crappy road.mif      ; Untyped                 ;
+; INIT_FILE                          ; startScreen.mif      ; Untyped                 ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                 ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Untyped                 ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                 ;
@@ -621,7 +924,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                 ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                 ;
-; CBXI_PARAMETER                     ; altsyncram_epm1      ; Untyped                 ;
+; CBXI_PARAMETER                     ; altsyncram_7sm1      ; Untyped                 ;
 +------------------------------------+----------------------+-------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1035,7 +1338,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------------------------------+
 ; Name                                      ; Value                                                                ;
 +-------------------------------------------+----------------------------------------------------------------------+
-; Number of entity instances                ; 3                                                                    ;
+; Number of entity instances                ; 6                                                                    ;
 ; Entity Instance                           ; drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; ROM                                                                  ;
 ;     -- WIDTH_A                            ; 3                                                                    ;
@@ -1051,6 +1354,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OPERATION_MODE                     ; ROM                                                                  ;
 ;     -- WIDTH_A                            ; 3                                                                    ;
 ;     -- NUMWORDS_A                         ; 630                                                                  ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                         ;
+;     -- WIDTH_B                            ; 1                                                                    ;
+;     -- NUMWORDS_B                         ; 1                                                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                            ;
+; Entity Instance                           ; drawCar:U2000|oppCar:U100|altsyncram:altsyncram_component            ;
+;     -- OPERATION_MODE                     ; ROM                                                                  ;
+;     -- WIDTH_A                            ; 3                                                                    ;
+;     -- NUMWORDS_A                         ; 630                                                                  ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                         ;
+;     -- WIDTH_B                            ; 1                                                                    ;
+;     -- NUMWORDS_B                         ; 1                                                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                            ;
+; Entity Instance                           ; drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component      ;
+;     -- OPERATION_MODE                     ; ROM                                                                  ;
+;     -- WIDTH_A                            ; 3                                                                    ;
+;     -- NUMWORDS_A                         ; 630                                                                  ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                         ;
+;     -- WIDTH_B                            ; 1                                                                    ;
+;     -- NUMWORDS_B                         ; 1                                                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                            ;
+; Entity Instance                           ; drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component  ;
+;     -- OPERATION_MODE                     ; ROM                                                                  ;
+;     -- WIDTH_A                            ; 3                                                                    ;
+;     -- NUMWORDS_A                         ; 4248                                                                 ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                         ;
 ;     -- WIDTH_B                            ; 1                                                                    ;
 ;     -- NUMWORDS_B                         ; 1                                                                    ;
@@ -1102,8 +1438,58 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------+
+; Port Connectivity Checks: "drawGameOver:over" ;
++-------+-------+----------+--------------------+
+; Port  ; Type  ; Severity ; Details            ;
++-------+-------+----------+--------------------+
+; reset ; Input ; Info     ; Stuck at GND       ;
++-------+-------+----------+--------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "drawPlayer:U2500" ;
++-----------+-------+----------+---------------+
+; Port      ; Type  ; Severity ; Details       ;
++-----------+-------+----------+---------------+
+; reset     ; Input ; Info     ; Stuck at GND  ;
+; yin[4..3] ; Input ; Info     ; Stuck at VCC  ;
+; yin[2..1] ; Input ; Info     ; Stuck at GND  ;
+; yin[6]    ; Input ; Info     ; Stuck at VCC  ;
+; yin[5]    ; Input ; Info     ; Stuck at GND  ;
+; yin[0]    ; Input ; Info     ; Stuck at VCC  ;
++-----------+-------+----------+---------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "drawCar:U2000" ;
++-------+-------+----------+----------------+
+; Port  ; Type  ; Severity ; Details        ;
++-------+-------+----------+----------------+
+; reset ; Input ; Info     ; Stuck at GND   ;
++-------+-------+----------+----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "drawCar:U1000" ;
++-------+-------+----------+----------------+
+; Port  ; Type  ; Severity ; Details        ;
++-------+-------+----------+----------------+
+; reset ; Input ; Info     ; Stuck at GND   ;
++-------+-------+----------+----------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "drawBackground:dB" ;
++-------+-------+----------+--------------------+
+; Port  ; Type  ; Severity ; Details            ;
++-------+-------+----------+--------------------+
+; reset ; Input ; Info     ; Stuck at GND       ;
++-------+-------+----------+--------------------+
+
+
 +-------------------------------------------------------------------+
-; Port Connectivity Checks: "ctrlpath_generate:U8342987|counter:U3" ;
+; Port Connectivity Checks: "ctrlpath_generate:ctrlpath|counter:U4" ;
 +---------------+-------+----------+--------------------------------+
 ; Port          ; Type  ; Severity ; Details                        ;
 +---------------+-------+----------+--------------------------------+
@@ -1118,26 +1504,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------+
-; Port Connectivity Checks: "ctrlpath_generate:U8342987|counter:U2" ;
+; Port Connectivity Checks: "ctrlpath_generate:ctrlpath|counter:U3" ;
 +---------------+-------+----------+--------------------------------+
 ; Port          ; Type  ; Severity ; Details                        ;
 +---------------+-------+----------+--------------------------------+
 ; count[19..18] ; Input ; Info     ; Stuck at VCC                   ;
-; count[16..14] ; Input ; Info     ; Stuck at VCC                   ;
-; count[10..9]  ; Input ; Info     ; Stuck at VCC                   ;
+; count[14..13] ; Input ; Info     ; Stuck at VCC                   ;
 ; count[7..6]   ; Input ; Info     ; Stuck at VCC                   ;
-; count[26..22] ; Input ; Info     ; Stuck at GND                   ;
-; count[13..11] ; Input ; Info     ; Stuck at GND                   ;
-; count[5..0]   ; Input ; Info     ; Stuck at GND                   ;
-; count[21]     ; Input ; Info     ; Stuck at VCC                   ;
-; count[20]     ; Input ; Info     ; Stuck at GND                   ;
-; count[17]     ; Input ; Info     ; Stuck at GND                   ;
-; count[8]      ; Input ; Info     ; Stuck at GND                   ;
+; count[26..20] ; Input ; Info     ; Stuck at GND                   ;
+; count[17..15] ; Input ; Info     ; Stuck at GND                   ;
+; count[12..11] ; Input ; Info     ; Stuck at GND                   ;
+; count[9..8]   ; Input ; Info     ; Stuck at GND                   ;
+; count[3..2]   ; Input ; Info     ; Stuck at GND                   ;
+; count[10]     ; Input ; Info     ; Stuck at VCC                   ;
+; count[5]      ; Input ; Info     ; Stuck at GND                   ;
+; count[4]      ; Input ; Info     ; Stuck at VCC                   ;
+; count[1]      ; Input ; Info     ; Stuck at VCC                   ;
+; count[0]      ; Input ; Info     ; Stuck at GND                   ;
 +---------------+-------+----------+--------------------------------+
 
 
 +-------------------------------------------------------------------+
-; Port Connectivity Checks: "ctrlpath_generate:U8342987|counter:U1" ;
+; Port Connectivity Checks: "ctrlpath_generate:ctrlpath|counter:U2" ;
 +---------------+-------+----------+--------------------------------+
 ; Port          ; Type  ; Severity ; Details                        ;
 +---------------+-------+----------+--------------------------------+
@@ -1151,17 +1539,55 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+-------+----------+--------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ctrlpath_generate:U8342987"                                                                                                                                                                     ;
-+-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port              ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; resetn            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; resetn[-1]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
-; lane_enable       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (3 bits) it drives.  The 29 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; lane_enable[2..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; draw_reset        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-+-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ctrlpath_generate:ctrlpath|counter:U5" ;
++---------------+-------+----------+--------------------------------+
+; Port          ; Type  ; Severity ; Details                        ;
++---------------+-------+----------+--------------------------------+
+; count[6..4]   ; Input ; Info     ; Stuck at VCC                   ;
+; count[2..1]   ; Input ; Info     ; Stuck at VCC                   ;
+; count[26..10] ; Input ; Info     ; Stuck at GND                   ;
+; count[8..7]   ; Input ; Info     ; Stuck at GND                   ;
+; count[9]      ; Input ; Info     ; Stuck at VCC                   ;
+; count[3]      ; Input ; Info     ; Stuck at GND                   ;
+; count[0]      ; Input ; Info     ; Stuck at GND                   ;
++---------------+-------+----------+--------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "ctrlpath_generate:ctrlpath|counter:U1" ;
++---------------+-------+----------+--------------------------------+
+; Port          ; Type  ; Severity ; Details                        ;
++---------------+-------+----------+--------------------------------+
+; count[6..4]   ; Input ; Info     ; Stuck at VCC                   ;
+; count[2..1]   ; Input ; Info     ; Stuck at VCC                   ;
+; count[26..10] ; Input ; Info     ; Stuck at GND                   ;
+; count[8..7]   ; Input ; Info     ; Stuck at GND                   ;
+; count[9]      ; Input ; Info     ; Stuck at VCC                   ;
+; count[3]      ; Input ; Info     ; Stuck at GND                   ;
+; count[0]      ; Input ; Info     ; Stuck at GND                   ;
++---------------+-------+----------+--------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "ctrlpath_generate:ctrlpath|seg7decoder:kmn" ;
++----------+-------+----------+------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                  ;
++----------+-------+----------+------------------------------------------+
+; Input[3] ; Input ; Info     ; Stuck at GND                             ;
++----------+-------+----------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ctrlpath_generate:ctrlpath"                                                                     ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; draw_reset       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; draw_done2       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; draw_player_done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wait_enable      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1169,39 +1595,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 203                         ;
-;     ENA               ; 9                           ;
-;     ENA SCLR          ; 65                          ;
-;     ENA SLD           ; 15                          ;
-;     SCLR              ; 91                          ;
-;     plain             ; 23                          ;
-; arriav_lcell_comb     ; 292                         ;
-;     arith             ; 188                         ;
+; arriav_ff             ; 394                         ;
+;     ENA               ; 28                          ;
+;     ENA SCLR          ; 179                         ;
+;     ENA SLD           ; 8                           ;
+;     SCLR              ; 145                         ;
+;     plain             ; 34                          ;
+; arriav_lcell_comb     ; 718                         ;
+;     arith             ; 387                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 166                         ;
-;         2 data inputs ; 15                          ;
-;         3 data inputs ; 1                           ;
+;         1 data inputs ; 342                         ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 8                           ;
 ;         4 data inputs ; 2                           ;
-;         5 data inputs ; 3                           ;
-;     normal            ; 94                          ;
+;         5 data inputs ; 5                           ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 320                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 18                          ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 10                          ;
-;         5 data inputs ; 25                          ;
-;         6 data inputs ; 26                          ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 25                          ;
+;         4 data inputs ; 55                          ;
+;         5 data inputs ; 67                          ;
+;         6 data inputs ; 123                         ;
 ;     shared            ; 10                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 6                           ;
 ;         3 data inputs ; 1                           ;
-; boundary_port         ; 54                          ;
+; boundary_port         ; 111                         ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 21                          ;
+; stratixv_ram_block    ; 30                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.60                        ;
-; Average LUT depth     ; 2.22                        ;
+; Max LUT depth         ; 5.70                        ;
+; Average LUT depth     ; 2.64                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1210,7 +1638,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1220,61 +1648,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Thu Nov 21 21:20:22 2019
+    Info: Processing started: Fri Nov 29 11:30:32 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga_demo -c vga_demo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vga_adapter/vga_pll.v
-    Info (12023): Found entity 1: vga_pll File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_pll.v Line: 36
+    Info (12023): Found entity 1: vga_pll File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_pll.v Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file vga_adapter/vga_adapter.v
-    Info (12023): Found entity 1: vga_adapter File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 78
+    Info (12023): Found entity 1: vga_adapter File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file vga_adapter/vga_address_translator.v
-    Info (12023): Found entity 1: vga_address_translator File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_address_translator.v Line: 4
+    Info (12023): Found entity 1: vga_address_translator File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_address_translator.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file vga_adapter/vga_controller.v
-    Info (12023): Found entity 1: vga_controller File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_controller.v Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file vga_demo.v
-    Info (12023): Found entity 1: vga_demo File: W:/ece241/ECE241-Road-Rage-master/vga_demo.v Line: 1
-Info (12021): Found 3 design units, including 3 entities, in source file fill.v
-    Info (12023): Found entity 1: fill File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 3
-    Info (12023): Found entity 2: drawBackground File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 303
-    Info (12023): Found entity 3: drawCar File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 350
+    Info (12023): Found entity 1: vga_controller File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_controller.v Line: 9
+Info (12021): Found 0 design units, including 0 entities, in source file vga_demo.v
+Info (12021): Found 1 design units, including 1 entities, in source file fill.v
+    Info (12023): Found entity 1: fill File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file playercar.v
-    Info (12023): Found entity 1: playerCar File: W:/ece241/ECE241-Road-Rage-master/playerCar.v Line: 39
+    Info (12023): Found entity 1: playerCar File: W:/Documents/ECE241-Road-Rage-master/playerCar.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file backgroundimage.v
-    Info (12023): Found entity 1: backgroundImage File: W:/ece241/ECE241-Road-Rage-master/backgroundImage.v Line: 39
+    Info (12023): Found entity 1: backgroundImage File: W:/Documents/ECE241-Road-Rage-master/backgroundImage.v Line: 39
 Info (12021): Found 0 design units, including 0 entities, in source file tosim.v
 Info (12021): Found 1 design units, including 1 entities, in source file lfsr.v
-    Info (12023): Found entity 1: LFSR File: W:/ece241/ECE241-Road-Rage-master/LFSR.v Line: 1
+    Info (12023): Found entity 1: LFSR File: W:/Documents/ECE241-Road-Rage-master/LFSR.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ctrlpath_generate.v
-    Info (12023): Found entity 1: ctrlpath_generate File: W:/ece241/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 1
+    Info (12023): Found entity 1: ctrlpath_generate File: W:/Documents/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file decimaldisplay.v
-    Info (12023): Found entity 1: decimalDisplay File: W:/ece241/ECE241-Road-Rage-master/decimalDisplay.v Line: 1
-    Info (12023): Found entity 2: seg7decoder File: W:/ece241/ECE241-Road-Rage-master/decimalDisplay.v Line: 57
-Warning (10261): Verilog HDL Event Control warning at counter.v(13): Event Control contains a complex event expression File: W:/ece241/ECE241-Road-Rage-master/counter.v Line: 13
+    Info (12023): Found entity 1: decimalDisplay File: W:/Documents/ECE241-Road-Rage-master/decimalDisplay.v Line: 1
+    Info (12023): Found entity 2: seg7decoder File: W:/Documents/ECE241-Road-Rage-master/decimalDisplay.v Line: 65
+Warning (10261): Verilog HDL Event Control warning at counter.v(13): Event Control contains a complex event expression File: W:/Documents/ECE241-Road-Rage-master/counter.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file counter.v
-    Info (12023): Found entity 1: counter File: W:/ece241/ECE241-Road-Rage-master/counter.v Line: 1
+    Info (12023): Found entity 1: counter File: W:/Documents/ECE241-Road-Rage-master/counter.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file datapath.v
 Info (12021): Found 1 design units, including 1 entities, in source file oppcar.v
-    Info (12023): Found entity 1: oppCar File: W:/ece241/ECE241-Road-Rage-master/oppCar.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at fill.v(57): created implicit net for "go" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 57
+    Info (12023): Found entity 1: oppCar File: W:/Documents/ECE241-Road-Rage-master/oppCar.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file nicebg.v
+    Info (12023): Found entity 1: niceBG File: W:/Documents/ECE241-Road-Rage-master/niceBG.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file drawplayer.v
+    Info (12023): Found entity 1: drawPlayer File: W:/Documents/ECE241-Road-Rage-master/drawPlayer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file drawcar.v
+    Info (12023): Found entity 1: drawCar File: W:/Documents/ECE241-Road-Rage-master/drawCar.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file drawbackground.v
+    Info (12023): Found entity 1: drawBackground File: W:/Documents/ECE241-Road-Rage-master/drawBackground.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file drawgameover.v
+    Info (12023): Found entity 1: drawGameOver File: W:/Documents/ECE241-Road-Rage-master/drawGameOver.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file gameover.v
+    Info (12023): Found entity 1: gameOver File: W:/Documents/ECE241-Road-Rage-master/gameOver.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at fill.v(93): created implicit net for "draw_reset" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 93
+Warning (10236): Verilog HDL Implicit Net warning at decimalDisplay.v(21): created implicit net for "enable_increment" File: W:/Documents/ECE241-Road-Rage-master/decimalDisplay.v Line: 21
 Info (12127): Elaborating entity "fill" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at fill.v(57): object "go" assigned a value but never read File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 57
-Warning (10036): Verilog HDL or VHDL warning at fill.v(53): object "enable" assigned a value but never read File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 53
-Warning (10230): Verilog HDL assignment warning at fill.v(112): truncated value with size 32 to match size of target (7) File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 112
-Warning (10034): Output port "LEDR[9..1]" at fill.v(34) has no driver File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 34
-Info (12128): Elaborating entity "ctrlpath_generate" for hierarchy "ctrlpath_generate:U8342987" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 75
-Warning (10036): Verilog HDL or VHDL warning at ctrlpath_generate.v(20): object "draw_counter" assigned a value but never read File: W:/ece241/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 20
-Warning (10230): Verilog HDL assignment warning at ctrlpath_generate.v(84): truncated value with size 32 to match size of target (8) File: W:/ece241/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 84
-Warning (10034): Output port "draw_reset" at ctrlpath_generate.v(8) has no driver File: W:/ece241/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 8
-Info (12128): Elaborating entity "counter" for hierarchy "ctrlpath_generate:U8342987|counter:U1" File: W:/ece241/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 41
-Warning (10230): Verilog HDL assignment warning at counter.v(10): truncated value with size 32 to match size of target (1) File: W:/ece241/ECE241-Road-Rage-master/counter.v Line: 10
-Warning (10230): Verilog HDL assignment warning at counter.v(18): truncated value with size 32 to match size of target (27) File: W:/ece241/ECE241-Road-Rage-master/counter.v Line: 18
-Info (12128): Elaborating entity "drawBackground" for hierarchy "drawBackground:dB" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 76
-Warning (10036): Verilog HDL or VHDL warning at fill.v(317): object "done" assigned a value but never read File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 317
-Info (12128): Elaborating entity "backgroundImage" for hierarchy "drawBackground:dB|backgroundImage:bG" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 304
-Info (12128): Elaborating entity "altsyncram" for hierarchy "drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component" File: W:/ece241/ECE241-Road-Rage-master/backgroundImage.v Line: 81
-Info (12130): Elaborated megafunction instantiation "drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component" File: W:/ece241/ECE241-Road-Rage-master/backgroundImage.v Line: 81
-Info (12133): Instantiated megafunction "drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component" with the following parameter: File: W:/ece241/ECE241-Road-Rage-master/backgroundImage.v Line: 81
+Warning (10230): Verilog HDL assignment warning at fill.v(227): truncated value with size 32 to match size of target (8) File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 227
+Warning (10230): Verilog HDL assignment warning at fill.v(230): truncated value with size 32 to match size of target (8) File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 230
+Warning (10034): Output port "LEDR[7]" at fill.v(32) has no driver File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 32
+Warning (10034): Output port "LEDR[4..1]" at fill.v(32) has no driver File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 32
+Info (12128): Elaborating entity "ctrlpath_generate" for hierarchy "ctrlpath_generate:ctrlpath" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 96
+Warning (10034): Output port "draw_reset" at ctrlpath_generate.v(10) has no driver File: W:/Documents/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 10
+Info (12128): Elaborating entity "seg7decoder" for hierarchy "ctrlpath_generate:ctrlpath|seg7decoder:kmn" File: W:/Documents/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 39
+Info (12128): Elaborating entity "counter" for hierarchy "ctrlpath_generate:ctrlpath|counter:U1" File: W:/Documents/ECE241-Road-Rage-master/ctrlpath_generate.v Line: 44
+Info (12128): Elaborating entity "drawBackground" for hierarchy "drawBackground:dB" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 105
+Info (12128): Elaborating entity "backgroundImage" for hierarchy "drawBackground:dB|backgroundImage:bG" File: W:/Documents/ECE241-Road-Rage-master/drawBackground.v Line: 2
+Info (12128): Elaborating entity "altsyncram" for hierarchy "drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component" File: W:/Documents/ECE241-Road-Rage-master/backgroundImage.v Line: 81
+Info (12130): Elaborated megafunction instantiation "drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component" File: W:/Documents/ECE241-Road-Rage-master/backgroundImage.v Line: 81
+Info (12133): Instantiated megafunction "drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component" with the following parameter: File: W:/Documents/ECE241-Road-Rage-master/backgroundImage.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1290,19 +1724,19 @@ Info (12133): Instantiated megafunction "drawBackground:dB|backgroundImage:bG|al
     Info (12134): Parameter "width_a" = "3"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2og1.tdf
-    Info (12023): Found entity 1: altsyncram_2og1 File: W:/ece241/ECE241-Road-Rage-master/db/altsyncram_2og1.tdf Line: 31
+    Info (12023): Found entity 1: altsyncram_2og1 File: W:/Documents/ECE241-Road-Rage-master/db/altsyncram_2og1.tdf Line: 31
 Info (12128): Elaborating entity "altsyncram_2og1" for hierarchy "drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_01a.tdf
-    Info (12023): Found entity 1: decode_01a File: W:/ece241/ECE241-Road-Rage-master/db/decode_01a.tdf Line: 22
-Info (12128): Elaborating entity "decode_01a" for hierarchy "drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated|decode_01a:rden_decode" File: W:/ece241/ECE241-Road-Rage-master/db/altsyncram_2og1.tdf Line: 39
+    Info (12023): Found entity 1: decode_01a File: W:/Documents/ECE241-Road-Rage-master/db/decode_01a.tdf Line: 22
+Info (12128): Elaborating entity "decode_01a" for hierarchy "drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated|decode_01a:rden_decode" File: W:/Documents/ECE241-Road-Rage-master/db/altsyncram_2og1.tdf Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ifb.tdf
-    Info (12023): Found entity 1: mux_ifb File: W:/ece241/ECE241-Road-Rage-master/db/mux_ifb.tdf Line: 22
-Info (12128): Elaborating entity "mux_ifb" for hierarchy "drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated|mux_ifb:mux2" File: W:/ece241/ECE241-Road-Rage-master/db/altsyncram_2og1.tdf Line: 40
-Info (12128): Elaborating entity "drawCar" for hierarchy "drawCar:U1000" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 77
-Info (12128): Elaborating entity "oppCar" for hierarchy "drawCar:U1000|oppCar:U100" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 351
-Info (12128): Elaborating entity "altsyncram" for hierarchy "drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component" File: W:/ece241/ECE241-Road-Rage-master/oppCar.v Line: 81
-Info (12130): Elaborated megafunction instantiation "drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component" File: W:/ece241/ECE241-Road-Rage-master/oppCar.v Line: 81
-Info (12133): Instantiated megafunction "drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component" with the following parameter: File: W:/ece241/ECE241-Road-Rage-master/oppCar.v Line: 81
+    Info (12023): Found entity 1: mux_ifb File: W:/Documents/ECE241-Road-Rage-master/db/mux_ifb.tdf Line: 22
+Info (12128): Elaborating entity "mux_ifb" for hierarchy "drawBackground:dB|backgroundImage:bG|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated|mux_ifb:mux2" File: W:/Documents/ECE241-Road-Rage-master/db/altsyncram_2og1.tdf Line: 40
+Info (12128): Elaborating entity "drawCar" for hierarchy "drawCar:U1000" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 106
+Info (12128): Elaborating entity "oppCar" for hierarchy "drawCar:U1000|oppCar:U100" File: W:/Documents/ECE241-Road-Rage-master/drawCar.v Line: 2
+Info (12128): Elaborating entity "altsyncram" for hierarchy "drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component" File: W:/Documents/ECE241-Road-Rage-master/oppCar.v Line: 81
+Info (12130): Elaborated megafunction instantiation "drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component" File: W:/Documents/ECE241-Road-Rage-master/oppCar.v Line: 81
+Info (12133): Instantiated megafunction "drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component" with the following parameter: File: W:/Documents/ECE241-Road-Rage-master/oppCar.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1318,15 +1752,65 @@ Info (12133): Instantiated megafunction "drawCar:U1000|oppCar:U100|altsyncram:al
     Info (12134): Parameter "width_a" = "3"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_etf1.tdf
-    Info (12023): Found entity 1: altsyncram_etf1 File: W:/ece241/ECE241-Road-Rage-master/db/altsyncram_etf1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_etf1 File: W:/Documents/ECE241-Road-Rage-master/db/altsyncram_etf1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_etf1" for hierarchy "drawCar:U1000|oppCar:U100|altsyncram:altsyncram_component|altsyncram_etf1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "LFSR" for hierarchy "LFSR:random" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 78
-Warning (10230): Verilog HDL assignment warning at LFSR.v(14): truncated value with size 32 to match size of target (3) File: W:/ece241/ECE241-Road-Rage-master/LFSR.v Line: 14
-Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 139
-Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator" File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 192
-Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 213
-Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|altsyncram:VideoMemory" File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 213
-Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory" with the following parameter: File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 213
+Info (12128): Elaborating entity "drawPlayer" for hierarchy "drawPlayer:U2500" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 108
+Info (12128): Elaborating entity "playerCar" for hierarchy "drawPlayer:U2500|playerCar:U450" File: W:/Documents/ECE241-Road-Rage-master/drawPlayer.v Line: 2
+Info (12128): Elaborating entity "altsyncram" for hierarchy "drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component" File: W:/Documents/ECE241-Road-Rage-master/playerCar.v Line: 81
+Info (12130): Elaborated megafunction instantiation "drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component" File: W:/Documents/ECE241-Road-Rage-master/playerCar.v Line: 81
+Info (12133): Instantiated megafunction "drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component" with the following parameter: File: W:/Documents/ECE241-Road-Rage-master/playerCar.v Line: 81
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "car.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "630"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "3"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rrf1.tdf
+    Info (12023): Found entity 1: altsyncram_rrf1 File: W:/Documents/ECE241-Road-Rage-master/db/altsyncram_rrf1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_rrf1" for hierarchy "drawPlayer:U2500|playerCar:U450|altsyncram:altsyncram_component|altsyncram_rrf1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "drawGameOver" for hierarchy "drawGameOver:over" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 109
+Warning (10230): Verilog HDL assignment warning at drawGameOver.v(11): truncated value with size 8 to match size of target (7) File: W:/Documents/ECE241-Road-Rage-master/drawGameOver.v Line: 11
+Warning (10230): Verilog HDL assignment warning at drawGameOver.v(44): truncated value with size 8 to match size of target (7) File: W:/Documents/ECE241-Road-Rage-master/drawGameOver.v Line: 44
+Info (12128): Elaborating entity "gameOver" for hierarchy "drawGameOver:over|gameOver:gameover" File: W:/Documents/ECE241-Road-Rage-master/drawGameOver.v Line: 2
+Info (12128): Elaborating entity "altsyncram" for hierarchy "drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component" File: W:/Documents/ECE241-Road-Rage-master/gameOver.v Line: 81
+Info (12130): Elaborated megafunction instantiation "drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component" File: W:/Documents/ECE241-Road-Rage-master/gameOver.v Line: 81
+Info (12133): Instantiated megafunction "drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component" with the following parameter: File: W:/Documents/ECE241-Road-Rage-master/gameOver.v Line: 81
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "gameOverWindow.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "4248"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "13"
+    Info (12134): Parameter "width_a" = "3"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_f3h1.tdf
+    Info (12023): Found entity 1: altsyncram_f3h1 File: W:/Documents/ECE241-Road-Rage-master/db/altsyncram_f3h1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_f3h1" for hierarchy "drawGameOver:over|gameOver:gameover|altsyncram:altsyncram_component|altsyncram_f3h1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "LFSR" for hierarchy "LFSR:random" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 110
+Warning (10230): Verilog HDL assignment warning at LFSR.v(14): truncated value with size 32 to match size of target (3) File: W:/Documents/ECE241-Road-Rage-master/LFSR.v Line: 14
+Info (12128): Elaborating entity "decimalDisplay" for hierarchy "decimalDisplay:displayhexstuff" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 111
+Warning (10230): Verilog HDL assignment warning at decimalDisplay.v(21): truncated value with size 32 to match size of target (1) File: W:/Documents/ECE241-Road-Rage-master/decimalDisplay.v Line: 21
+Warning (10230): Verilog HDL assignment warning at decimalDisplay.v(42): truncated value with size 32 to match size of target (27) File: W:/Documents/ECE241-Road-Rage-master/decimalDisplay.v Line: 42
+Warning (10230): Verilog HDL assignment warning at decimalDisplay.v(45): truncated value with size 32 to match size of target (4) File: W:/Documents/ECE241-Road-Rage-master/decimalDisplay.v Line: 45
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 288
+Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator" File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 192
+Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 213
+Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|altsyncram:VideoMemory" File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 213
+Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory" with the following parameter: File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 213
     Info (12134): Parameter "WIDTH_A" = "3"
     Info (12134): Parameter "WIDTH_B" = "3"
     Info (12134): Parameter "INTENDED_DEVICE_FAMILY" = "Cyclone II"
@@ -1341,17 +1825,17 @@ Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory"
     Info (12134): Parameter "CLOCK_ENABLE_INPUT_B" = "BYPASS"
     Info (12134): Parameter "CLOCK_ENABLE_OUTPUT_B" = "BYPASS"
     Info (12134): Parameter "POWER_UP_UNINITIALIZED" = "FALSE"
-    Info (12134): Parameter "INIT_FILE" = "crappy road.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_epm1.tdf
-    Info (12023): Found entity 1: altsyncram_epm1 File: W:/ece241/ECE241-Road-Rage-master/db/altsyncram_epm1.tdf Line: 33
-Info (12128): Elaborating entity "altsyncram_epm1" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12134): Parameter "INIT_FILE" = "startScreen.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7sm1.tdf
+    Info (12023): Found entity 1: altsyncram_7sm1 File: W:/Documents/ECE241-Road-Rage-master/db/altsyncram_7sm1.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_7sm1" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_7sm1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_7la.tdf
-    Info (12023): Found entity 1: decode_7la File: W:/ece241/ECE241-Road-Rage-master/db/decode_7la.tdf Line: 22
-Info (12128): Elaborating entity "decode_7la" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_epm1:auto_generated|decode_7la:decode2" File: W:/ece241/ECE241-Road-Rage-master/db/altsyncram_epm1.tdf Line: 46
-Info (12128): Elaborating entity "vga_pll" for hierarchy "vga_adapter:VGA|vga_pll:mypll" File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 231
-Info (12128): Elaborating entity "altpll" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_pll.v Line: 53
-Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_pll.v Line: 53
-Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" with the following parameter: File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_pll.v Line: 53
+    Info (12023): Found entity 1: decode_7la File: W:/Documents/ECE241-Road-Rage-master/db/decode_7la.tdf Line: 22
+Info (12128): Elaborating entity "decode_7la" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_7sm1:auto_generated|decode_7la:decode2" File: W:/Documents/ECE241-Road-Rage-master/db/altsyncram_7sm1.tdf Line: 46
+Info (12128): Elaborating entity "vga_pll" for hierarchy "vga_adapter:VGA|vga_pll:mypll" File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 231
+Info (12128): Elaborating entity "altpll" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_pll.v Line: 53
+Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_pll.v Line: 53
+Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" with the following parameter: File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_pll.v Line: 53
     Info (12134): Parameter "operation_mode" = "NORMAL"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
     Info (12134): Parameter "lpm_type" = "altpll"
@@ -1364,23 +1848,20 @@ Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:al
     Info (12134): Parameter "clk0_multiply_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll_80u.tdf
-    Info (12023): Found entity 1: altpll_80u File: W:/ece241/ECE241-Road-Rage-master/db/altpll_80u.tdf Line: 25
+    Info (12023): Found entity 1: altpll_80u File: W:/Documents/ECE241-Road-Rage-master/db/altpll_80u.tdf Line: 25
 Info (12128): Elaborating entity "altpll_80u" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: W:/ece241/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 252
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_adapter.v Line: 252
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 34
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 34
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 34
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 34
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 34
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 34
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 34
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 34
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 34
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 32
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 32
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 32
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 32
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 32
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 35
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 44
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 385 assignments for entity "DE1_SoC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CS_N -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_DIN -entity DE1_SoC was ignored
@@ -1767,41 +2248,74 @@ Warning (20013): Ignored 385 assignments for entity "DE1_SoC" -- entity does not
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[7] -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_SYNC_N -entity DE1_SoC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE1_SoC was ignored
-Info (144001): Generated suppressed messages file W:/ece241/ECE241-Road-Rage-master/vga_demo.map.smsg
+Info (144001): Generated suppressed messages file W:/Documents/ECE241-Road-Rage-master/vga_demo.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: W:/ece241/ECE241-Road-Rage-master/db/altpll_80u.tdf Line: 33
+Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: W:/Documents/ECE241-Road-Rage-master/db/altpll_80u.tdf Line: 33
     Info: Must be connected
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 22
-    Warning (15610): No output dependent on input pin "KEY[2]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 22
-    Warning (15610): No output dependent on input pin "KEY[3]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 22
-    Warning (15610): No output dependent on input pin "SW[0]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 23
-    Warning (15610): No output dependent on input pin "SW[1]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 23
-    Warning (15610): No output dependent on input pin "SW[2]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 23
-    Warning (15610): No output dependent on input pin "SW[3]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 23
-    Warning (15610): No output dependent on input pin "SW[4]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 23
-    Warning (15610): No output dependent on input pin "SW[5]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 23
-    Warning (15610): No output dependent on input pin "SW[6]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 23
-    Warning (15610): No output dependent on input pin "SW[7]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 23
-    Warning (15610): No output dependent on input pin "SW[8]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 23
-    Warning (15610): No output dependent on input pin "SW[9]" File: W:/ece241/ECE241-Road-Rage-master/fill.v Line: 23
-Info (21057): Implemented 375 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 39 output pins
-    Info (21061): Implemented 299 logic cells
-    Info (21064): Implemented 21 RAM segments
+Warning (21074): Design contains 46 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 28
+    Warning (15610): No output dependent on input pin "KEY[2]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 28
+    Warning (15610): No output dependent on input pin "KEY[3]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 28
+    Warning (15610): No output dependent on input pin "SW[0]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[1]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[2]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[3]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[4]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[5]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[6]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[7]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[8]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[9]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 29
+    Warning (15610): No output dependent on input pin "GPIO_0[0]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[1]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[2]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[3]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[5]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[7]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[9]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[10]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[11]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[12]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[13]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[14]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[15]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[16]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[17]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[18]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[19]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[20]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[21]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[22]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[23]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[24]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[25]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[26]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[27]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[28]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[29]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[30]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[31]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[32]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[33]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[34]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+    Warning (15610): No output dependent on input pin "GPIO_0[35]" File: W:/Documents/ECE241-Road-Rage-master/fill.v Line: 30
+Info (21057): Implemented 859 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 51 input pins
+    Info (21059): Implemented 60 output pins
+    Info (21061): Implemented 717 logic cells
+    Info (21064): Implemented 30 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 427 warnings
-    Info: Peak virtual memory: 750 megabytes
-    Info: Processing ended: Thu Nov 21 21:20:55 2019
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 458 warnings
+    Info: Peak virtual memory: 761 megabytes
+    Info: Processing ended: Fri Nov 29 11:31:16 2019
+    Info: Elapsed time: 00:00:44
+    Info: Total CPU time (on all processors): 00:00:32
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in W:/ece241/ECE241-Road-Rage-master/vga_demo.map.smsg.
+The suppressed messages can be found in W:/Documents/ECE241-Road-Rage-master/vga_demo.map.smsg.
 
 
