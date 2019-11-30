@@ -1,0 +1,19 @@
+
+
+W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_pll.v
+
+Nov 22 07AM:51:57>: Error in CNX file format.
+
+Error messages are listed in file
+W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_pll.v
+
+Nov 22 07AM:52:00>: Error in CNX file format.
+
+Error messages are listed in file
+W:/Documents/ECE241-Road-Rage-master/vga_adapter/vga_pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
