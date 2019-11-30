@@ -1,0 +1,41 @@
+always@(*)
+	begin: state_table
+		case(current_state)
+			ERASE:begin
+					if(erase_done ==1'b1) next_state=DRAWPLAYER;
+					else next_state=ERASE;
+					end
+			DRAWPLAYER:begin
+					if(draw_player_done == 1'b1) next_state = DRAW;
+					else next_state = DRAWPLAYER;
+				end
+			DRAW:begin
+					if(draw_done==1'b1) begin
+						if(collide_yes==1'b1) next_state=GAMEOVER;
+						else if(carCount==2'd2)next_state=DRAW2;
+						else next_state=WAIT;
+					end
+					else next_state=DRAW;
+				end
+			DRAW2:begin
+					if(draw_done2==1'b1) begin
+							if(collide_yes==1'b1) next_state=GAMEOVER;
+							else next_state=WAIT;
+					end
+					else next_state=DRAW2;
+					end
+			WAIT:begin
+					if (wait_done==1'b1) next_state=ERASE;
+					else next_state=WAIT;
+				end
+			GAMEOVER:begin
+					if(startGame)next_state=START;
+					else next_state=GAMEOVER;
+				end
+			START:begin
+					if(startGame) next_state=START;
+					else next_state=START;
+			end	
+			default: next_state=START;
+		endcase
+	end //end state table

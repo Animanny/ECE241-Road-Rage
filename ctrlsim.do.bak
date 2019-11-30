@@ -1,0 +1,203 @@
+vlib work
+
+vlog fill.v ctrlpath_generate.v counter.v drawPlayer.v drawBackground.v drawCar.v LFSR.v
+
+vsim fill
+
+log {/*}
+
+add wave {/*}
+
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5 ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+
+force {clk} 0 
+run 5 ns
+
+force {clk} 1
+run 5ns
+

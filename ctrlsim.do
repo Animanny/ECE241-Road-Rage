@@ -1,6 +1,6 @@
 vlib work
 
-vlog ctrlpath_generate.v
+vlog  ctrlpath_generate.v
 
 vsim ctrlpath_generate
 
@@ -31,7 +31,7 @@ force {clk} 0
 run 5 ns
 
 force {clk} 1
-run 5ns
+run 5 ns
 
 force {clk} 0 
 run 5 ns

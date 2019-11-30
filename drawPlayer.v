@@ -20,13 +20,14 @@ module drawPlayer(input clk, reset, enable, input [7:0] xin, input[6:0] yin, out
 			if (memCounter < 10'b1001110110) begin 
 				if(xCounter < 8'b10100)begin
 					xCounter <= xCounter +  1'b1;
+					memCounter <= memCounter + 1'b1;
+					
 				end
 				else begin
 					xCounter <= 0;
 					yCounter <= yCounter + 1'b1;
-						
+					memCounter <= memCounter + 1'b1;
 				end
-				memCounter <= memCounter + 1'b1;
 			end
 			else begin
 				xCounter <= 8'b0;

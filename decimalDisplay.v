@@ -1,7 +1,8 @@
-module decimalDisplay(enable_module,CLOCK_50, HEX0, HEX1);
+module decimalDisplay(enable_module,resetn,CLOCK_50, HEX0, HEX1);
     input CLOCK_50;
 	 input enable_module;
 	 
+	input resetn;
 	 
     output [6:0] HEX0;
     output [6:0] HEX1;
@@ -32,8 +33,8 @@ module decimalDisplay(enable_module,CLOCK_50, HEX0, HEX1);
 //            endcase
 //        end
 
-    always@(posedge CLOCK_50)
-	 if(enable_module)
+    always@(posedge CLOCK_50) begin
+	if(enable_module)
         begin
             if (counter >= count)
                 counter <= 27'b000000000000000000000000000;
@@ -53,7 +54,11 @@ module decimalDisplay(enable_module,CLOCK_50, HEX0, HEX1);
 						tens<=4'd0;
 					end
         end
-	
+	 else if(~resetn)begin
+		 ones<=0;
+		 tens<=0;
+	 end
+	end
 
 endmodule
 
